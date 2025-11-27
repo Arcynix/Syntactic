@@ -4,18 +4,212 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Techella</title>
+    <title>Syntactic</title>
     <link rel="stylesheet" href="styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    <form>
-        <h2 class="heading">Hello World</h2>
-        <p class="anchor" href="anonemous.html">hello</p>
-    </form>
+    <div class="container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="articles.html">Articles</a>
+                <a href="topics.html">Topics</a>
+                <a href="community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="hero">
+            <div class="hero-content">
+                <h1 class="main-title">Syntactic</h1>
+                
+                <div class="content-grid">
+                    <div class="action-card">
+                        <h2>LEARN<br>CODE...</h2>
+                    </div>
+                    
+                    <div class="text-content">
+                        <h2>The Free Coding Encyclopedia.</h2>
+                        <p>Syntactic is the world's largest open-source coding knowledge base. From basic syntax to advanced algorithms, we provide comprehensive, community-driven documentation on every programming concept.</p>
+                        <div class="stats-row">
+                            <div class="stat"><span class="stat-num">5K+</span><br>Articles</div>
+                            <div class="stat"><span class="stat-num">50+</span><br>Languages</div>
+                            <div class="stat"><span class="stat-num">100%</span><br>Free</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <section class="popular-section">
+        <h2 class="section-title">Popular Articles.</h2>
+        <div class="popular-grid">
+            <a href="#" class="popular-card">
+                <span class="popular-tag">Language</span>
+                <h3>Getting Started with Python</h3>
+                <p>Learn Python basics, syntax, and fundamental concepts.</p>
+                <span class="read-count">📖 12K reads</span>
+            </a>
+            <a href="#" class="popular-card">
+                <span class="popular-tag">Framework</span>
+                <h3>React Hooks Guide</h3>
+                <p>Master useState, useEffect, and custom hooks.</p>
+                <span class="read-count">📖 9K reads</span>
+            </a>
+            <a href="#" class="popular-card">
+                <span class="popular-tag">Concept</span>
+                <h3>Understanding Async/Await</h3>
+                <p>Deep dive into asynchronous JavaScript programming.</p>
+                <span class="read-count">📖 8K reads</span>
+            </a>
+        </div>
+    </section>
+
+    <section class="features">
+        <h2 class="section-title">What We Offer.</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>Comprehensive Articles</h3>
+                <p>Deep-dive documentation on every programming language framework, and concept. Written and maintained by the developer community.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Code Examples</h3>
+                <p>Real-world code snippets and implementations for every topic. Copy, learn, and adapt for your projects.</p>
+            </div>
+            <div class="feature-card">
+                <h3>Always Updated</h3>
+                <p>Community contributions ensure our content stays current with the latest versions, best practices, and emerging technologies.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="learning-paths">
+        <div class="section-container">
+            <h2 class="section-title">Learning Paths.</h2>
+            <p class="section-intro">Structured roadmaps to guide your coding journey from beginner to expert.</p>
+            <div class="paths-grid">
+                <div class="path-card">
+                    <div class="path-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>HTML → CSS → JavaScript → React → Node.js</p>
+                    <ul class="path-steps">
+                        <li>✓ 42 Articles</li>
+                        <li>✓ 6-8 months</li>
+                        <li>✓ Beginner friendly</li>
+                    </ul>
+                    <a href="#" class="path-btn">Start Path</a>
+                </div>
+                <div class="path-card">
+                    <div class="path-icon">🤖</div>
+                    <h3>Machine Learning</h3>
+                    <p>Python → NumPy → Pandas → TensorFlow → PyTorch</p>
+                    <ul class="path-steps">
+                        <li>✓ 38 Articles</li>
+                        <li>✓ 8-10 months</li>
+                        <li>✓ Intermediate level</li>
+                    </ul>
+                    <a href="#" class="path-btn">Start Path</a>
+                </div>
+                <div class="path-card">
+                    <div class="path-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>Dart → Flutter → Firebase → App Publishing</p>
+                    <ul class="path-steps">
+                        <li>✓ 35 Articles</li>
+                        <li>✓ 5-7 months</li>
+                        <li>✓ Beginner friendly</li>
+                    </ul>
+                    <a href="#" class="path-btn">Start Path</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="trending-section">
+        <div class="section-container">
+            <h2 class="section-title">Trending This Week.</h2>
+            <div class="trending-list">
+                <a href="#" class="trending-item">
+                    <span class="trend-rank">1</span>
+                    <div class="trend-content">
+                        <h4>Docker Containerization Basics</h4>
+                        <p>Learn how to containerize applications with Docker</p>
+                    </div>
+                    <span class="trend-stats">↗ 2.5K views</span>
+                </a>
+                <a href="#" class="trending-item">
+                    <span class="trend-rank">2</span>
+                    <div class="trend-content">
+                        <h4>TypeScript Advanced Types</h4>
+                        <p>Master utility types, generics, and type guards</p>
+                    </div>
+                    <span class="trend-stats">↗ 1.8K views</span>
+                </a>
+                <a href="#" class="trending-item">
+                    <span class="trend-rank">3</span>
+                    <div class="trend-content">
+                        <h4>Next.js 14 App Router</h4>
+                        <p>Build modern React apps with the new App Router</p>
+                    </div>
+                    <span class="trend-stats">↗ 1.6K views</span>
+                </a>
+                <a href="#" class="trending-item">
+                    <span class="trend-rank">4</span>
+                    <div class="trend-content">
+                        <h4>PostgreSQL Optimization</h4>
+                        <p>Database indexing and query optimization techniques</p>
+                    </div>
+                    <span class="trend-stats">↗ 1.4K views</span>
+                </a>
+                <a href="#" class="trending-item">
+                    <span class="trend-rank">5</span>
+                    <div class="trend-content">
+                        <h4>Rust for Beginners</h4>
+                        <p>Get started with systems programming in Rust</p>
+                    </div>
+                    <span class="trend-stats">↗ 1.2K views</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="articles.html">Browse Articles</a>
+                <a href="topics.html">Topics</a>
+                <a href="community.html">Contribute</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 
 </html>

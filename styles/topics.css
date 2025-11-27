@@ -1,0 +1,109 @@
+/* Subscription/Topics Page Styles */
+
+/* Import shared color variables */
+@import url('home.css');
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    align-items: center;
+}
+
+.pricing-card {
+    background: var(--bg-dark);
+    padding: 30px;
+    border-radius: 20px;
+    color: #fff;
+    text-align: center;
+    position: relative;
+    border: 1px solid var(--card-border);
+    transition: all 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--glow-green);
+    border-color: var(--primary-green-light);
+}
+
+.pricing-card.featured {
+    border-color: var(--primary-green);
+    box-shadow: var(--shadow-lg);
+    background: var(--bg-dark-alt);
+}
+
+.plan-tag {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: var(--primary-green);
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 12px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.plan-name {
+    font-family: var(--font-serif);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+.plan-price {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: var(--primary-green-light);
+}
+
+.plan-price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+.plan-features {
+    list-style: none;
+    margin: 30px 0;
+    text-align: left;
+}
+
+.plan-features li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--card-border);
+    color: #e0e0e0;
+}
+
+.plan-btn {
+    display: inline-block;
+    padding: 12px 40px;
+    background: var(--primary-green);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+
+.plan-btn:hover {
+    background: var(--primary-green-dark);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+}
+
+.featured-btn {
+    background: linear-gradient(135deg, var(--primary-green), var(--primary-green-dark));
+}
+
+.featured-btn:hover {
+    transform: scale(1.08);
+}
+
+@media (max-width: 900px) {
+    .pricing-grid {
+        grid-template-columns: 1fr;
+    }
+}
