@@ -9,7 +9,9 @@
     <link rel="stylesheet" href="styles/topics.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -19,7 +21,7 @@
             <div class="search-container">
                 <div class="search-box">
                     <span class="search-icon">🔍</span>
-                    <input type="text" placeholder="Search topics...">
+                    <input type="text" placeholder="Search articles...">
                 </div>
             </div>
             <div class="nav-menu">
@@ -42,87 +44,104 @@
         </div>
 
         <main class="page-content">
-            <h1 class="page-title">Browse by Topic.</h1>
-            <p class="page-subtitle">Explore articles organized by programming domains and technologies.</p>
+            <h1 class="page-title">Knowledge Hubs.</h1>
+            <p class="page-subtitle">Curated collections of articles organized by domain and technology stack.</p>
 
-            <div class="pricing-grid">
+            <div class="topics-grid">
                 <!-- Topic 1 -->
-                <div class="pricing-card">
-                    <div class="plan-name">Frontend</div>
-                    <div class="plan-price">250<span> articles</span></div>
-                    <ul class="plan-features">
-                        <li>HTML & CSS</li>
-                        <li>JavaScript & TypeScript</li>
-                        <li>React, Vue, Angular</li>
-                        <li>UI/UX Best Practices</li>
-                    </ul>
-                    <a href="#" class="plan-btn">Browse</a>
+                <div class="topic-card">
+                    <div class="topic-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <p>UI/UX, React, CSS, and modern web interfaces.</p>
+                    <a href="topics/frontend.html" class="topic-link">View Hub →</a>
                 </div>
 
                 <!-- Topic 2 -->
-                <div class="pricing-card featured">
-                    <div class="plan-tag">Most Popular</div>
-                    <div class="plan-name">Backend</div>
-                    <div class="plan-price">350<span> articles</span></div>
-                    <ul class="plan-features">
-                        <li>Node.js, Python, Java</li>
-                        <li>Databases & APIs</li>
-                        <li>Authentication & Security</li>
-                        <li>System Design</li>
-                    </ul>
-                    <a href="#" class="plan-btn featured-btn">Browse</a>
+                <div class="topic-card">
+                    <div class="topic-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                    <p>Server-side logic, APIs, and system architecture.</p>
+                    <a href="topics/backend.html" class="topic-link">View Hub →</a>
                 </div>
 
                 <!-- Topic 3 -->
-                <div class="pricing-card">
-                    <div class="plan-name">DevOps</div>
-                    <div class="plan-price">180<span> articles</span></div>
-                    <ul class="plan-features">
-                        <li>Docker & Kubernetes</li>
-                        <li>CI/CD Pipelines</li>
-                        <li>Cloud Platforms</li>
-                        <li>Monitoring & Logging</li>
-                    </ul>
-                    <a href="#" class="plan-btn">Browse</a>
+                <div class="topic-card">
+                    <div class="topic-icon">🚀</div>
+                    <h3>DevOps & Infrastructure</h3>
+                    <p>CI/CD, Docker, Kubernetes, and automation.</p>
+                    <a href="topics/devops.html" class="topic-link">View Hub →</a>
                 </div>
 
                 <!-- Topic 4 -->
-                <div class="pricing-card">
-                    <div class="plan-name">Mobile</div>
-                    <div class="plan-price">220<span> articles</span></div>
-                    <ul class="plan-features">
-                        <li>iOS & Android</li>
-                        <li>React Native & Flutter</li>
-                        <li>App Store Publishing</li>
-                        <li>Mobile Performance</li>
-                    </ul>
-                    <a href="#" class="plan-btn">Browse</a>
+                <div class="topic-card">
+                    <div class="topic-icon">🛡️</div>
+                    <h3>Security</h3>
+                    <p>Web security, encryption, and best practices.</p>
+                    <a href="topics/security.html" class="topic-link">View Hub →</a>
                 </div>
 
                 <!-- Topic 5 -->
-                <div class="pricing-card">
-                    <div class="plan-name">Data Science</div>
-                    <div class="plan-price">195<span> articles</span></div>
-                    <ul class="plan-features">
-                        <li>Python & R</li>
-                        <li>ML & AI</li>
-                        <li>Data Visualization</li>
-                        <li>Big Data Tools</li>
-                    </ul>
-                    <a href="#" class="plan-btn">Browse</a>
+                <div class="topic-card">
+                    <div class="topic-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>iOS, Android, and cross-platform apps.</p>
+                    <a href="topics/mobile.html" class="topic-link">View Hub →</a>
                 </div>
 
                 <!-- Topic 6 -->
-                <div class="pricing-card">
-                    <div class="plan-name">Security</div>
-                    <div class="plan-price">145<span> articles</span></div>
-                    <ul class="plan-features">
-                        <li>Web Security</li>
-                        <li>Cryptography</li>
-                        <li>Penetration Testing</li>
-                        <li>Security Best Practices</li>
-                    </ul>
-                    <a href="#" class="plan-btn">Browse</a>
+                <div class="topic-card">
+                    <div class="topic-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Analysis, visualization, and statistical modeling.</p>
+                    <a href="topics/data-science.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 7 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <p>SQL, NoSQL, and data storage solutions.</p>
+                    <a href="topics/databases.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 8 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Core web technologies and standards.</p>
+                    <a href="topics/web-development.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 9 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🎮</div>
+                    <h3>Game Development</h3>
+                    <p>Engines, math, and graphics for games.</p>
+                    <a href="topics/game-development.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 10 -->
+                <div class="topic-card">
+                    <div class="topic-icon">⛓️</div>
+                    <h3>Blockchain</h3>
+                    <p>Decentralized apps and smart contracts.</p>
+                    <a href="topics/blockchain.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 11 -->
+                <div class="topic-card">
+                    <div class="topic-icon">☁️</div>
+                    <h3>Cloud Computing</h3>
+                    <p>AWS, Azure, GCP, and cloud infrastructure.</p>
+                    <a href="topics/cloud.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 12 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Neural networks, NLP, and computer vision.</p>
+                    <a href="topics/ai-ml.html" class="topic-link">View Hub →</a>
                 </div>
             </div>
         </main>
@@ -140,16 +159,13 @@
                 <a href="articles.html">Articles</a>
                 <a href="community.html">Contribute</a>
             </div>
-            <div class="footer-section">
-                <h4>Legal</h4>
-                <a href="#">Privacy Policy</a>
-                <a href="#">Terms of Service</a>
-            </div>
         </div>
         <div class="footer-bottom">
             <p>&copy; 2024 Syntactic. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Vision - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Computer Vision</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Computer Vision: Teaching Machines to See</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">AI/ML</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Computer vision is an interdisciplinary scientific field that deals with how computers can gain
+                        high-level understanding from digital images or videos.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Computer vision tasks include methods for acquiring, processing, analyzing and understanding
+                        digital images, and extraction of high-dimensional data from the real world.</p>
+
+                    <h2 id="core-tasks">Core Tasks</h2>
+                    <ul>
+                        <li><strong>Image Classification:</strong> Identifying what is in an image.</li>
+                        <li><strong>Object Detection:</strong> Locating and identifying multiple objects in an image.
+                        </li>
+                        <li><strong>Image Segmentation:</strong> Partitioning an image into multiple segments (sets of
+                            pixels).</li>
+                        <li><strong>Facial Recognition:</strong> Identifying or verifying a person from a digital image.
+                        </li>
+                    </ul>
+
+                    <h2 id="opencv">OpenCV & Deep Learning</h2>
+                    <p>OpenCV is the most popular library for traditional computer vision, while deep learning (CNNs)
+                        has revolutionized the field in recent years.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Python</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-python">import cv2
+
+# Load an image
+img = cv2.imread('image.jpg')
+
+# Convert to grayscale
+gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
+
+# Detect edges
+edges = cv2.Canny(gray, 100, 200)
+
+# Show the result
+cv2.imshow('Edges', edges)
+cv2.waitKey(0)</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://opencv.org/" target="_blank">OpenCV Official Website</a></li>
+                        <li><a href="https://www.pyimagesearch.com/" target="_blank">PyImageSearch</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="deep-learning.html" class="related-link">
+                        <strong>Deep Learning</strong>
+                        CNNs
+                    </a>
+                    <a href="python.html" class="related-link">
+                        <strong>Python</strong>
+                        Core Language
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+</body>
+
+</html>

@@ -114,8 +114,74 @@ function highlightTOCOnScroll() {
 }
 
 // Simple Search Functionality
-function searchArticles(query) {
-    // This would be expanded with actual search implementation
-    console.log('Searching for:', query);
-    // Future: implement client-side search or API call
+async function initializeSearch() {
+    const searchInputs = document.querySelectorAll('.search-box input');
+    if (searchInputs.length === 0) return;
+
+    // Determine project root relative to current page
+    const currentPath = window.location.pathname;
+    const isTopicPage = currentPath.includes('/topics/');
+    const isArticlePage = currentPath.includes('/articles/');
+    const rootPath = (isTopicPage || isArticlePage) ? '../' : '';
+
+    try {
+        const response = await fetch(`${rootPath}data/articles.json`);
+        const articles = await response.json();
+
+        searchInputs.forEach(input => {
+            input.addEventListener('input', (e) => {
+                const query = e.target.value.toLowerCase();
+                if (query.length < 2) {
+                    hideSearchResults();
+                    return;
+                }
+                const results = articles.filter(article =>
+                    article.title.toLowerCase().includes(query) ||
+                    article.description.toLowerCase().includes(query) ||
+                    article.tags.some(tag => tag.toLowerCase().includes(query))
+                );
+                showSearchResults(results, input, rootPath);
+            });
+
+            // Hide results when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!input.contains(e.target) && !document.querySelector('.search-results-dropdown')?.contains(e.target)) {
+                    hideSearchResults();
+                }
+            });
+        });
+    } catch (error) {
+        console.error('Error loading search data:', error);
+    }
 }
+
+function showSearchResults(results, input, rootPath) {
+    let resultsContainer = document.querySelector('.search-results-dropdown');
+    if (!resultsContainer) {
+        resultsContainer = document.createElement('div');
+        resultsContainer.className = 'search-results-dropdown';
+        input.parentElement.appendChild(resultsContainer);
+    }
+
+    if (results.length === 0) {
+        resultsContainer.innerHTML = '<div class="search-no-results">No articles found</div>';
+    } else {
+        resultsContainer.innerHTML = results.map(result => `
+            <a href="${rootPath}${result.url}" class="search-result-item">
+                <div class="result-title">${result.title}</div>
+                <div class="result-desc">${result.description}</div>
+            </a>
+        `).join('');
+    }
+    resultsContainer.style.display = 'block';
+}
+
+function hideSearchResults() {
+    const resultsContainer = document.querySelector('.search-results-dropdown');
+    if (resultsContainer) {
+        resultsContainer.style.display = 'none';
+    }
+}
+
+// Call initializeSearch on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', initializeSearch);

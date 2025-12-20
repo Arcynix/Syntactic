@@ -121,57 +121,117 @@
     margin: 10px 0;
 }
 
-/* Code Blocks */
+/* Code Blocks & Prism.js */
 .code-block {
-    position: relative;
+    background: #1e1e1e;
+    border-radius: 12px;
     margin: 25px 0;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
 }
 
 .code-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: var(--bg-dark);
     padding: 10px 20px;
-    border-radius: 12px 12px 0 0;
+    background: rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid var(--card-border);
 }
 
 .code-language {
-    color: var(--primary-green-light);
-    font-size: 0.85rem;
-    font-weight: 600;
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .copy-btn {
-    background: var(--primary-green);
-    color: #fff;
-    border: none;
-    padding: 6px 15px;
-    border-radius: 6px;
+    background: transparent;
+    border: 1px solid var(--primary-green);
+    color: var(--primary-green);
+    padding: 4px 12px;
+    border-radius: 4px;
+    font-size: 0.75rem;
     cursor: pointer;
-    font-size: 0.8rem;
     transition: all 0.3s ease;
 }
 
 .copy-btn:hover {
-    background: var(--primary-green-dark);
-    transform: scale(1.05);
+    background: var(--primary-green);
+    color: white;
 }
 
-.code-block pre {
-    background: #2d2d2d;
-    padding: 20px;
-    border-radius: 0 0 12px 12px;
-    overflow-x: auto;
-    margin: 0;
-}
-
-.code-block code {
-    font-family: 'Courier New', monospace;
-    font-size: 0.95rem;
+pre[class*="language-"] {
+    margin: 0 !important;
+    padding: 20px !important;
+    background: transparent !important;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
     line-height: 1.6;
-    color: #e0e0e0;
 }
+
+code[class*="language-"] {
+    font-family: inherit;
+    text-shadow: none !important;
+}
+
+/* Prism Theme Overrides (VS Code Dark style) */
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #6a9955;
+}
+
+.token.punctuation {
+    color: #d4d4d4;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+    color: #b5cea8;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+    color: #ce9178;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+    color: #d4d4d4;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+    color: #569cd6;
+}
+
+.token.function,
+.token.class-name {
+    color: #dcdcaa;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+    color: #d16969;
+}
+
 
 /* Right Sidebar - Related Articles */
 .related-sidebar {
@@ -264,7 +324,7 @@
     .article-container {
         grid-template-columns: 1fr;
     }
-    
+
     .toc-sidebar,
     .related-sidebar {
         display: none;

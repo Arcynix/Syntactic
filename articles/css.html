@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern CSS3 - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">CSS3</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Modern CSS3: Styling the Web</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Web</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 15 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>CSS (Cascading Style Sheets) is a style sheet language used for describing the presentation of a
+                        document written in a markup language like HTML.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>CSS3 is the latest standard for CSS. It is completely backward-compatible with earlier versions
+                        of CSS. It brings many new features like rounded corners, shadows, gradients, transitions or
+                        animations.</p>
+
+                    <h2 id="flexbox">Flexbox</h2>
+                    <p>The Flexible Box Layout Module makes it easier to design flexible responsive layout structure
+                        without using float or positioning.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">CSS</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-css">.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.item {
+    flex: 1 1 200px;
+    margin: 10px;
+}</code></pre>
+                    </div>
+
+                    <h2 id="css-variables">CSS Variables</h2>
+                    <p>Custom properties (sometimes referred to as CSS variables) are entities defined by CSS authors
+                        that contain specific values to be reused throughout a document.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">CSS</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-css">:root {
+    --primary-color: #3d5a49;
+    --secondary-color: #6a9955;
+}
+
+.button {
+    background-color: var(--primary-color);
+    color: white;
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">MDN CSS
+                                Documentation</a></li>
+                        <li><a href="https://css-tricks.com/" target="_blank">CSS-Tricks</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="html.html" class="related-link">
+                        <strong>HTML5</strong>
+                        Structure
+                    </a>
+                    <a href="flexbox.html" class="related-link">
+                        <strong>Flexbox</strong>
+                        Layout Guide
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-css.min.js"></script>
+</body>
+
+</html>

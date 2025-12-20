@@ -77,6 +77,12 @@
     color: #e0e0e0;
 }
 
+.card-features li.coming-soon {
+    color: var(--text-muted);
+    font-style: italic;
+    cursor: default;
+}
+
 .plan-btn {
     display: inline-block;
     padding: 12px 40px;

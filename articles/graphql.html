@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GraphQL Guide - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">GraphQL</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">GraphQL: A Query Language for APIs</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">API</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>GraphQL is a query language for APIs and a runtime for fulfilling those queries with your
+                        existing data. GraphQL provides a complete and understandable description of the data in your
+                        API.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Developed internally by Facebook in 2012 before being publicly released in 2015, GraphQL allows
+                        clients to define the structure of the data required, and exactly the same structure of data is
+                        returned from the server.</p>
+
+                    <h2 id="key-concepts">Key Concepts</h2>
+                    <p>GraphQL is based on a few core concepts that differentiate it from REST.</p>
+
+                    <h3 id="schema">Schema</h3>
+                    <p>A GraphQL schema is at the center of any GraphQL server implementation. It describes the
+                        functionality available to the clients which connect to it.</p>
+
+                    <h3 id="queries">Queries</h3>
+                    <p>A GraphQL query is used to read or fetch values. In REST, you would use a GET request.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">GraphQL</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>query {
+  user(id: "123") {
+    name
+    email
+    posts {
+      title
+    }
+  }
+}</code></pre>
+                    </div>
+
+                    <h3 id="mutations">Mutations</h3>
+                    <p>Mutations are used to write or post data. In REST, you would use POST, PUT, PATCH, or DELETE.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">GraphQL</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>mutation {
+  createPost(title: "New Post", content: "Hello World") {
+    id
+    title
+  }
+}</code></pre>
+                    </div>
+
+                    <h2 id="benefits">Benefits of GraphQL</h2>
+                    <ul>
+                        <li><strong>No Over-fetching or Under-fetching</strong>: Get exactly what you need and nothing
+                            more.</li>
+                        <li><strong>Strongly Typed</strong>: The schema defines the types and relationships.</li>
+                        <li><strong>Single Endpoint</strong>: All data is accessed through a single URL.</li>
+                        <li><strong>Introspection</strong>: Clients can query the schema itself for details about the
+                            API.</li>
+                    </ul>
+
+                    <h2 id="vs-rest">GraphQL vs REST</h2>
+                    <p>While REST is based on resources (URLs), GraphQL is based on a graph of data. REST often requires
+                        multiple requests to fetch related data, while GraphQL can fetch it all in one go.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://graphql.org/" target="_blank">GraphQL Official Site</a></li>
+                        <li><a href="https://www.howtographql.com/" target="_blank">How to GraphQL</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="rest-api.html" class="related-link">
+                        <strong>REST API</strong>
+                        Traditional APIs
+                    </a>
+                    <a href="apollo.html" class="related-link">
+                        <strong>Apollo</strong>
+                        GraphQL Client
+                    </a>
+                    <a href="backend.html" class="related-link">
+                        <strong>Backend Dev</strong>
+                        Overview
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RESTful API Design - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">REST API</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">RESTful API Design</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">API</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>REST (Representational State Transfer) is an architectural style for providing standards between
+                        computer systems on the web, making it easier for systems to communicate with each other.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>RESTful APIs are based on the HTTP protocol and use standard HTTP methods to perform operations
+                        on resources.</p>
+
+                    <h2 id="core-principles">Core Principles</h2>
+                    <p>A truly RESTful API must adhere to several constraints:</p>
+                    <ul>
+                        <li><strong>Stateless</strong>: Each request from client to server must contain all the
+                            information necessary to understand and complete the request.</li>
+                        <li><strong>Client-Server</strong>: The client and server are independent of each other.</li>
+                        <li><strong>Cacheable</strong>: Responses must define themselves as cacheable or not to prevent
+                            clients from reusing stale data.</li>
+                        <li><strong>Uniform Interface</strong>: A consistent way of interacting with a given server
+                            regardless of device or type of application.</li>
+                    </ul>
+
+                    <h2 id="http-methods">HTTP Methods</h2>
+                    <p>RESTful APIs use standard HTTP verbs to represent actions:</p>
+                    <ul>
+                        <li><strong>GET</strong>: Retrieve a resource.</li>
+                        <li><strong>POST</strong>: Create a new resource.</li>
+                        <li><strong>PUT</strong>: Update an existing resource (full replacement).</li>
+                        <li><strong>PATCH</strong>: Update an existing resource (partial update).</li>
+                        <li><strong>DELETE</strong>: Remove a resource.</li>
+                    </ul>
+
+                    <h2 id="resource-naming">Resource Naming</h2>
+                    <p>Resources should be named using nouns, not verbs. Use plural nouns for collections.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">HTTP</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code># Good
+GET /users
+POST /users
+GET /users/123
+
+# Bad
+GET /getUsers
+POST /createNewUser
+GET /user/123/details</code></pre>
+                    </div>
+
+                    <h2 id="status-codes">HTTP Status Codes</h2>
+                    <p>Use appropriate status codes to indicate the outcome of a request:</p>
+                    <ul>
+                        <li><strong>200 OK</strong>: Success.</li>
+                        <li><strong>201 Created</strong>: Successful creation (POST).</li>
+                        <li><strong>400 Bad Request</strong>: Client-side error.</li>
+                        <li><strong>401 Unauthorized</strong>: Authentication required.</li>
+                        <li><strong>403 Forbidden</strong>: Authenticated but not allowed.</li>
+                        <li><strong>404 Not Found</strong>: Resource doesn't exist.</li>
+                        <li><strong>500 Internal Server Error</strong>: Server-side error.</li>
+                    </ul>
+
+                    <h2 id="versioning">Versioning</h2>
+                    <p>Always version your API to avoid breaking changes for existing clients.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">HTTP</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code># URI Versioning
+https://api.example.com/v1/users
+
+# Header Versioning
+Accept: application/vnd.example.v1+json</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://restfulapi.net/" target="_blank">RESTful API Tutorial</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Representational_state_transfer"
+                                target="_blank">Wikipedia - REST</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="graphql.html" class="related-link">
+                        <strong>GraphQL</strong>
+                        Alternative to REST
+                    </a>
+                    <a href="microservices.html" class="related-link">
+                        <strong>Microservices</strong>
+                        Architecture
+                    </a>
+                    <a href="backend.html" class="related-link">
+                        <strong>Backend Dev</strong>
+                        Overview
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

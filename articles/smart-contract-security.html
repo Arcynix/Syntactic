@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Contract Security - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Contract Security</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Smart Contract Security: Best Practices</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Blockchain</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Smart contract security is critical because code is law on the blockchain. Once deployed,
+                        contracts are immutable, and bugs can lead to permanent loss of funds.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Security should be integrated into every stage of the development lifecycle. This includes
+                        rigorous testing, audits, and following established security patterns.</p>
+
+                    <h2 id="common-vulnerabilities">Common Vulnerabilities</h2>
+                    <p>Understanding common attacks like Reentrancy, Integer Overflow/Underflow, and Front-running is
+                        essential for writing secure code.</p>
+
+                    <h2 id="reentrancy">Reentrancy Attack</h2>
+                    <p>A reentrancy attack occurs when a contract calls an external contract before updating its state,
+                        allowing the external contract to call back into the original contract recursively.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Solidity</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-solidity">// VULNERABLE CONTRACT
+function withdraw() public {
+    uint256 amount = balances[msg.sender];
+    (bool success, ) = msg.sender.call{value: amount}("");
+    require(success);
+    balances[msg.sender] = 0; // State update AFTER external call
+}
+
+// SECURE CONTRACT (Checks-Effects-Interactions pattern)
+function withdraw() public {
+    uint256 amount = balances[msg.sender];
+    balances[msg.sender] = 0; // State update BEFORE external call
+    (bool success, ) = msg.sender.call{value: amount}("");
+    require(success);
+}</code></pre>
+                    </div>
+
+                    <h2 id="best-practices">Best Practices</h2>
+                    <p>Always use the Checks-Effects-Interactions pattern, use OpenZeppelin's battle-tested libraries,
+                        and perform thorough audits before mainnet deployment.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://docs.openzeppelin.com/learn/smart-contract-security"
+                                target="_blank">OpenZeppelin Security Guide</a></li>
+                        <li><a href="https://swcregistry.io/" target="_blank">Smart Contract Weakness Classification
+                                (SWC) Registry</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="solidity.html" class="related-link">
+                        <strong>Solidity</strong>
+                        Language Guide
+                    </a>
+                    <a href="web-security.html" class="related-link">
+                        <strong>Web Security</strong>
+                        General Principles
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-solidity.min.js"></script>
+</body>
+
+</html>

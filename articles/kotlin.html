@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kotlin Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Kotlin</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Kotlin: Modern, Concise, Safe</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Kotlin is a modern, cross-platform, statically typed, general-purpose programming language with
+                        type inference.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Kotlin is designed to interoperate fully with Java, and the JVM version of Kotlin's standard
+                        library depends on the Java Class Library.</p>
+
+                    <h2 id="basics">Basics</h2>
+                    <p>Kotlin is concise, reducing the amount of boilerplate code you need to write.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Kotlin</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-kotlin">fun main() {
+    val name = "Kotlin"
+    println("Hello, $name!")
+}</code></pre>
+                    </div>
+
+                    <h2 id="null-safety">Null Safety</h2>
+                    <p>Kotlin's type system is aimed at eliminating the danger of null references from code, also known
+                        as the "billion-dollar mistake".</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Kotlin</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-kotlin">var a: String = "abc" // Regular initialization means non-null by default
+// a = null // compilation error
+
+var b: String? = "abc" // can be set to null
+b = null // ok
+println(b?.length)</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://kotlinlang.org/docs/home.html" target="_blank">Kotlin Documentation</a>
+                        </li>
+                        <li><a href="https://play.kotlinlang.org/" target="_blank">Kotlin Playground</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="android-dev.html" class="related-link">
+                        <strong>Android Dev</strong>
+                        With Kotlin
+                    </a>
+                    <a href="java.html" class="related-link">
+                        <strong>Java</strong>
+                        Interoperability
+                    </a>
+                    <a href="multiplatform.html" class="related-link">
+                        <strong>Multiplatform</strong>
+                        Kotlin Everywhere
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-kotlin.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,602 @@
+[
+    {
+        "id": "python",
+        "title": "Python Programming",
+        "category": "Language",
+        "url": "articles/python.html",
+        "description": "Complete guide to Python programming language, from basics to OOP.",
+        "tags": [
+            "python",
+            "backend",
+            "oop"
+        ]
+    },
+    {
+        "id": "javascript",
+        "title": "JavaScript Guide",
+        "category": "Web Development",
+        "url": "articles/javascript.html",
+        "description": "Master modern JavaScript (ES6+) for frontend and backend development.",
+        "tags": [
+            "javascript",
+            "frontend",
+            "es6"
+        ]
+    },
+    {
+        "id": "react",
+        "title": "React",
+        "category": "Frontend",
+        "url": "articles/react.html",
+        "description": "Build modern user interfaces with React components and hooks.",
+        "tags": [
+            "react",
+            "frontend",
+            "jsx"
+        ]
+    },
+    {
+        "id": "data-structures",
+        "title": "Data Structures",
+        "category": "Computer Science",
+        "url": "articles/data-structures.html",
+        "description": "Fundamental data structures including arrays, linked lists, and trees.",
+        "tags": [
+            "cs",
+            "algorithms",
+            "data-structures"
+        ]
+    },
+    {
+        "id": "docker",
+        "title": "Docker & Containerization",
+        "category": "DevOps",
+        "url": "articles/docker.html",
+        "description": "Learn how to package and deploy applications using Docker containers.",
+        "tags": [
+            "docker",
+            "devops",
+            "containers"
+        ]
+    },
+    {
+        "id": "design-patterns",
+        "title": "Design Patterns",
+        "category": "Software Engineering",
+        "url": "articles/design-patterns.html",
+        "description": "Common software design patterns explained with code examples and use cases.",
+        "tags": [
+            "patterns",
+            "architecture",
+            "oop"
+        ]
+    },
+    {
+        "id": "mongodb",
+        "title": "MongoDB & NoSQL",
+        "category": "Database",
+        "url": "articles/mongodb.html",
+        "description": "Learn document-based databases and when to use NoSQL over SQL.",
+        "tags": [
+            "mongodb",
+            "nosql",
+            "database"
+        ]
+    },
+    {
+        "id": "rest-api",
+        "title": "RESTful API Design",
+        "category": "API",
+        "url": "articles/rest-api.html",
+        "description": "Design clean, scalable APIs following REST principles and best practices.",
+        "tags": [
+            "api",
+            "rest",
+            "backend"
+        ]
+    },
+    {
+        "id": "web-security",
+        "title": "Web Security Essentials",
+        "category": "Security",
+        "url": "articles/web-security.html",
+        "description": "Protect applications from XSS, CSRF, SQL injection, and other attacks.",
+        "tags": [
+            "security",
+            "web",
+            "owasp"
+        ]
+    },
+    {
+        "id": "unit-testing",
+        "title": "Unit Testing Best Practices",
+        "category": "Testing",
+        "url": "articles/unit-testing.html",
+        "description": "Write effective tests with Jest, Mocha, and testing frameworks.",
+        "tags": [
+            "testing",
+            "jest",
+            "quality"
+        ]
+    },
+    {
+        "id": "kubernetes",
+        "title": "Kubernetes Orchestration",
+        "category": "DevOps",
+        "url": "articles/kubernetes.html",
+        "description": "Automate deployment, scaling, and management of containerized applications.",
+        "tags": [
+            "kubernetes",
+            "k8s",
+            "devops"
+        ]
+    },
+    {
+        "id": "graphql",
+        "title": "GraphQL Guide",
+        "category": "API",
+        "url": "articles/graphql.html",
+        "description": "A query language for APIs and a runtime for fulfilling those queries.",
+        "tags": [
+            "graphql",
+            "api",
+            "query"
+        ]
+    },
+    {
+        "id": "clean-code",
+        "title": "Clean Code Best Practices",
+        "category": "Software Engineering",
+        "url": "articles/clean-code.html",
+        "description": "Writing code for humans: readability, maintainability, and SOLID principles.",
+        "tags": [
+            "clean-code",
+            "solid",
+            "quality"
+        ]
+    },
+    {
+        "id": "git",
+        "title": "Git Version Control",
+        "category": "Tools",
+        "url": "articles/git.html",
+        "description": "Master the world's most popular version control system.",
+        "tags": [
+            "git",
+            "vcs",
+            "tools"
+        ]
+    },
+    {
+        "id": "java",
+        "title": "Java Programming",
+        "category": "Language",
+        "url": "articles/java.html",
+        "description": "Comprehensive guide to Java, from JVM basics to enterprise frameworks.",
+        "tags": [
+            "java",
+            "oop",
+            "backend"
+        ]
+    },
+    {
+        "id": "cpp",
+        "title": "C++ Programming",
+        "category": "Language",
+        "url": "articles/cpp.html",
+        "description": "High-performance systems programming with C++ and the STL.",
+        "tags": [
+            "cpp",
+            "systems",
+            "performance"
+        ]
+    },
+    {
+        "id": "go",
+        "title": "Go Programming",
+        "category": "Language",
+        "url": "articles/go.html",
+        "description": "Cloud-native development with Go's concurrency and simplicity.",
+        "tags": [
+            "go",
+            "golang",
+            "concurrency"
+        ]
+    },
+    {
+        "id": "typescript",
+        "title": "TypeScript",
+        "category": "Language",
+        "url": "articles/typescript.html",
+        "description": "JavaScript with syntax for types, providing better tooling at scale.",
+        "tags": [
+            "typescript",
+            "ts",
+            "frontend"
+        ]
+    },
+    {
+        "id": "rust",
+        "title": "Rust Programming",
+        "category": "Language",
+        "url": "articles/rust.html",
+        "description": "Safe, fast, and productive systems programming with Rust.",
+        "tags": [
+            "rust",
+            "systems",
+            "safety"
+        ]
+    },
+    {
+        "id": "swift",
+        "title": "Swift Programming",
+        "category": "Language",
+        "url": "articles/swift.html",
+        "description": "Expressive and safe language for Apple platform development.",
+        "tags": [
+            "swift",
+            "ios",
+            "apple"
+        ]
+    },
+    {
+        "id": "kotlin",
+        "title": "Kotlin Programming",
+        "category": "Language",
+        "url": "articles/kotlin.html",
+        "description": "Modern and concise language for Android and JVM development.",
+        "tags": [
+            "kotlin",
+            "android",
+            "jvm"
+        ]
+    },
+    {
+        "id": "sql",
+        "title": "SQL Essentials",
+        "category": "Database",
+        "url": "articles/sql.html",
+        "description": "Master Structured Query Language for relational databases.",
+        "tags": [
+            "sql",
+            "database",
+            "query"
+        ]
+    },
+    {
+        "id": "postgresql",
+        "title": "PostgreSQL Guide",
+        "category": "Database",
+        "url": "articles/postgresql.html",
+        "description": "Advanced open-source database features and optimization.",
+        "tags": [
+            "postgresql",
+            "postgres",
+            "sql"
+        ]
+    },
+    {
+        "id": "html",
+        "title": "HTML5 Essentials",
+        "category": "Web Development",
+        "url": "articles/html.html",
+        "description": "The foundation of web structure and semantic markup.",
+        "tags": [
+            "html",
+            "web",
+            "frontend"
+        ]
+    },
+    {
+        "id": "css",
+        "title": "Modern CSS3",
+        "category": "Web Development",
+        "url": "articles/css.html",
+        "description": "Styling the web with Flexbox, Grid, and modern CSS features.",
+        "tags": [
+            "css",
+            "web",
+            "frontend"
+        ]
+    },
+    {
+        "id": "redis",
+        "title": "Redis Caching",
+        "category": "Database",
+        "url": "articles/redis.html",
+        "description": "In-memory data store for caching, pub/sub, and high performance.",
+        "tags": [
+            "redis",
+            "cache",
+            "nosql"
+        ]
+    },
+    {
+        "id": "mysql",
+        "title": "MySQL Basics",
+        "category": "Database",
+        "url": "articles/mysql.html",
+        "description": "The world's most popular open-source relational database.",
+        "tags": [
+            "mysql",
+            "sql",
+            "database"
+        ]
+    },
+    {
+        "id": "flexbox",
+        "title": "Flexbox Guide",
+        "category": "Web Development",
+        "url": "articles/flexbox.html",
+        "description": "Master the Flexible Box Layout for efficient UI design.",
+        "tags": [
+            "flexbox",
+            "css",
+            "layout"
+        ]
+    },
+    {
+        "id": "responsive-design",
+        "title": "Responsive Web Design",
+        "category": "Web Development",
+        "url": "articles/responsive-design.html",
+        "description": "Design websites that work on any device and screen size.",
+        "tags": [
+            "responsive",
+            "mobile",
+            "css"
+        ]
+    },
+    {
+        "id": "unity",
+        "title": "Unity Essentials",
+        "category": "Game Dev",
+        "url": "articles/unity.html",
+        "description": "Complete documentation for Unity game engine and C# scripting.",
+        "tags": [
+            "unity",
+            "csharp",
+            "gamedev"
+        ]
+    },
+    {
+        "id": "unreal-engine",
+        "title": "Unreal Engine 5",
+        "category": "Game Dev",
+        "url": "articles/unreal-engine.html",
+        "description": "Next-gen game development with UE5, Nanite, and Lumen.",
+        "tags": [
+            "unreal",
+            "cpp",
+            "gamedev"
+        ]
+    },
+    {
+        "id": "godot",
+        "title": "Godot Engine",
+        "category": "Game Dev",
+        "url": "articles/godot.html",
+        "description": "Open-source game development with Godot and GDScript.",
+        "tags": [
+            "godot",
+            "gdscript",
+            "gamedev"
+        ]
+    },
+    {
+        "id": "game-math",
+        "title": "Game Mathematics",
+        "category": "Game Dev",
+        "url": "articles/game-math.html",
+        "description": "Foundational math for games: vectors, matrices, and trig.",
+        "tags": [
+            "math",
+            "physics",
+            "gamedev"
+        ]
+    },
+    {
+        "id": "shaders",
+        "title": "Shader Programming",
+        "category": "Game Dev",
+        "url": "articles/shaders.html",
+        "description": "GPU programming with GLSL and HLSL for visual effects.",
+        "tags": [
+            "shaders",
+            "graphics",
+            "gpu"
+        ]
+    },
+    {
+        "id": "blockchain-basics",
+        "title": "Blockchain Basics",
+        "category": "Blockchain",
+        "url": "articles/blockchain-basics.html",
+        "description": "Understanding decentralized ledgers and consensus mechanisms.",
+        "tags": [
+            "blockchain",
+            "crypto",
+            "web3"
+        ]
+    },
+    {
+        "id": "ethereum",
+        "title": "Ethereum Guide",
+        "category": "Blockchain",
+        "url": "articles/ethereum.html",
+        "description": "The world computer: smart contracts and decentralized apps.",
+        "tags": [
+            "ethereum",
+            "eth",
+            "web3"
+        ]
+    },
+    {
+        "id": "solidity",
+        "title": "Solidity Programming",
+        "category": "Blockchain",
+        "url": "articles/solidity.html",
+        "description": "Smart contract development for the Ethereum Virtual Machine.",
+        "tags": [
+            "solidity",
+            "smart-contracts",
+            "web3"
+        ]
+    },
+    {
+        "id": "web3-js",
+        "title": "Web3.js & Ethers.js",
+        "category": "Blockchain",
+        "url": "articles/web3-js.html",
+        "description": "JavaScript libraries for interacting with the blockchain.",
+        "tags": [
+            "web3js",
+            "ethersjs",
+            "javascript"
+        ]
+    },
+    {
+        "id": "smart-contract-security",
+        "title": "Smart Contract Security",
+        "category": "Blockchain",
+        "url": "articles/smart-contract-security.html",
+        "description": "Best practices and common vulnerabilities in smart contracts.",
+        "tags": [
+            "security",
+            "audit",
+            "blockchain"
+        ]
+    },
+    {
+        "id": "cloud-basics",
+        "title": "Cloud Computing Basics",
+        "category": "Cloud",
+        "url": "articles/cloud-basics.html",
+        "description": "Understanding decentralized ledgers and consensus mechanisms.",
+        "tags": [
+            "cloud",
+            "iaas",
+            "paas"
+        ]
+    },
+    {
+        "id": "aws",
+        "title": "AWS Essentials",
+        "category": "Cloud",
+        "url": "articles/aws.html",
+        "description": "Complete guide to Amazon Web Services and core cloud infrastructure.",
+        "tags": [
+            "aws",
+            "cloud",
+            "infrastructure"
+        ]
+    },
+    {
+        "id": "azure",
+        "title": "Azure Fundamentals",
+        "category": "Cloud",
+        "url": "articles/azure.html",
+        "description": "Microsoft's cloud platform for enterprise applications and services.",
+        "tags": [
+            "azure",
+            "microsoft",
+            "cloud"
+        ]
+    },
+    {
+        "id": "gcp",
+        "title": "Google Cloud Platform",
+        "category": "Cloud",
+        "url": "articles/gcp.html",
+        "description": "High-performance cloud computing and data analytics by Google.",
+        "tags": [
+            "gcp",
+            "google",
+            "cloud"
+        ]
+    },
+    {
+        "id": "ai-intro",
+        "title": "AI Introduction",
+        "category": "AI/ML",
+        "url": "articles/ai-intro.html",
+        "description": "Overview of artificial intelligence, its history, and future impact.",
+        "tags": [
+            "ai",
+            "intelligence",
+            "future"
+        ]
+    },
+    {
+        "id": "ml-basics",
+        "title": "Machine Learning Basics",
+        "category": "AI/ML",
+        "url": "articles/ml-basics.html",
+        "description": "Foundational concepts of ML: supervised, unsupervised, and reinforcement learning.",
+        "tags": [
+            "ml",
+            "data",
+            "algorithms"
+        ]
+    },
+    {
+        "id": "deep-learning",
+        "title": "Deep Learning",
+        "category": "AI/ML",
+        "url": "articles/deep-learning.html",
+        "description": "Neural networks, backpropagation, and deep learning architectures.",
+        "tags": [
+            "deep-learning",
+            "neural-networks",
+            "ai"
+        ]
+    },
+    {
+        "id": "nlp",
+        "title": "Natural Language Processing",
+        "category": "AI/ML",
+        "url": "articles/nlp.html",
+        "description": "Teaching machines to understand, interpret, and generate human language.",
+        "tags": [
+            "nlp",
+            "text",
+            "language"
+        ]
+    },
+    {
+        "id": "computer-vision",
+        "title": "Computer Vision",
+        "category": "AI/ML",
+        "url": "articles/computer-vision.html",
+        "description": "Image processing and high-level understanding from digital images.",
+        "tags": [
+            "cv",
+            "images",
+            "vision"
+        ]
+    },
+    {
+        "id": "cybersecurity",
+        "title": "Cybersecurity Fundamentals",
+        "category": "Security",
+        "url": "articles/cybersecurity.html",
+        "description": "Protecting systems, networks, and programs from digital attacks.",
+        "tags": [
+            "security",
+            "cyber",
+            "defense"
+        ]
+    },
+    {
+        "id": "ethical-hacking",
+        "title": "Ethical Hacking",
+        "category": "Security",
+        "url": "articles/ethical-hacking.html",
+        "description": "Offensive security techniques to find and fix vulnerabilities.",
+        "tags": [
+            "hacking",
+            "pentesting",
+            "security"
+        ]
+    }
+]

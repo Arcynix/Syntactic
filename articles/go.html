@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Go Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Go</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Go Programming Language</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Go, also known as Golang, is a statically typed, compiled programming language designed at Google
+                        by Robert Griesemer, Rob Pike, and Ken Thompson.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Go is syntactically similar to C, but with memory safety, garbage collection, structural typing,
+                        and CSP-style concurrency.</p>
+
+                    <h2 id="key-features">Key Features</h2>
+                    <ul>
+                        <li><strong>Simplicity</strong>: Clean and easy-to-read syntax.</li>
+                        <li><strong>Concurrency</strong>: Built-in support with Goroutines and Channels.</li>
+                        <li><strong>Fast Compilation</strong>: Designed for speed.</li>
+                        <li><strong>Static Typing</strong>: Catches errors at compile time.</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Go</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>package main
+
+import "fmt"
+
+func main() {
+    fmt.Println("Hello, Go!")
+}</code></pre>
+                    </div>
+
+                    <h2 id="concurrency">Concurrency in Go</h2>
+                    <p>One of Go's standout features is its concurrency model. Goroutines are lightweight threads
+                        managed by the Go runtime.</p>
+
+                    <h3 id="goroutines">Goroutines</h3>
+                    <p>You can start a goroutine by simply using the `go` keyword before a function call.</p>
+
+                    <h3 id="channels">Channels</h3>
+                    <p>Channels are the pipes that connect concurrent goroutines. You can send values into channels from
+                        one goroutine and receive those values into another goroutine.</p>
+
+                    <h2 id="standard-library">Standard Library</h2>
+                    <p>Go has a powerful standard library that includes packages for HTTP servers, JSON parsing,
+                        cryptography, and more, making it an excellent choice for cloud-native development.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://go.dev/" target="_blank">Go Official Site</a></li>
+                        <li><a href="https://tour.golang.org/" target="_blank">A Tour of Go</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="cloud-native.html" class="related-link">
+                        <strong>Cloud Native</strong>
+                        Go in the Cloud
+                    </a>
+                    <a href="microservices.html" class="related-link">
+                        <strong>Microservices</strong>
+                        Building with Go
+                    </a>
+                    <a href="concurrency.html" class="related-link">
+                        <strong>Concurrency</strong>
+                        Patterns
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

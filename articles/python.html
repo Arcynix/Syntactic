@@ -7,9 +7,12 @@
     <title>Python Programming - Syntactic</title>
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -64,10 +67,14 @@
                 </header>
 
                 <div class="article-content">
-                    <p>Python is a high-level, interpreted programming language known for its simplicity and readability. Created by Guido van Rossum and first released in 1991, Python has become one of the most popular programming languages in the world.</p>
+                    <p>Python is a high-level, interpreted programming language known for its simplicity and
+                        readability. Created by Guido van Rossum and first released in 1991, Python has become one of
+                        the most popular programming languages in the world.</p>
 
                     <h2 id="introduction">Introduction</h2>
-                    <p>Python emphasizes code readability with its notable use of significant indentation. Its syntax allows programmers to express concepts in fewer lines of code than would be possible in languages such as C++ or Java.</p>
+                    <p>Python emphasizes code readability with its notable use of significant indentation. Its syntax
+                        allows programmers to express concepts in fewer lines of code than would be possible in
+                        languages such as C++ or Java.</p>
 
                     <p>Python supports multiple programming paradigms, including:</p>
                     <ul>
@@ -77,7 +84,8 @@
                     </ul>
 
                     <h2 id="basic-syntax">Basic Syntax</h2>
-                    <p>Python's syntax is designed to be readable and straightforward. Here are fundamental concepts:</p>
+                    <p>Python's syntax is designed to be readable and straightforward. Here are fundamental concepts:
+                    </p>
 
                     <h3 id="variables">Variables and Data Types</h3>
                     <p>Python is dynamically typed, meaning you don't need to declare variable types explicitly:</p>
@@ -87,7 +95,7 @@
                             <span class="code-language">Python</span>
                             <button class="copy-btn">Copy</button>
                         </div>
-                        <pre><code># Variable assignment
+                        <pre><code class="language-python"># Variable assignment
 name = "Alice"
 age = 30
 height = 5.6
@@ -109,7 +117,7 @@ num_int = int("456")  # 456</code></pre>
                             <span class="code-language">Python</span>
                             <button class="copy-btn">Copy</button>
                         </div>
-                        <pre><code># If statements
+                        <pre><code class="language-python"># If statements
 if age >= 18:
     print("Adult")
 elif age >= 13:
@@ -139,7 +147,7 @@ while count < 5:
                             <span class="code-language">Python</span>
                             <button class="copy-btn">Copy</button>
                         </div>
-                        <pre><code># Creating lists
+                        <pre><code class="language-python"># Creating lists
 fruits = ["apple", "banana", "cherry"]
 numbers = [1, 2, 3, 4, 5]
 mixed = [1, "two", 3.0, True]
@@ -162,7 +170,7 @@ squares = [x**2 for x in range(10)]</code></pre>
                             <span class="code-language">Python</span>
                             <button class="copy-btn">Copy</button>
                         </div>
-                        <pre><code># Creating dictionaries
+                        <pre><code class="language-python"># Creating dictionaries
 person = {
     "name": "Alice",
     "age": 30,
@@ -188,7 +196,7 @@ values = person.values()</code></pre>
                             <span class="code-language">Python</span>
                             <button class="copy-btn">Copy</button>
                         </div>
-                        <pre><code># Basic function
+                        <pre><code class="language-python"># Basic function
 def greet(name):
     return f"Hello, {name}!"
 
@@ -213,7 +221,7 @@ add = lambda a, b: a + b</code></pre>
                             <span class="code-language">Python</span>
                             <button class="copy-btn">Copy</button>
                         </div>
-                        <pre><code># Defining a class
+                        <pre><code class="language-python"># Defining a class
 class Dog:
     def __init__(self, name, breed):
         self.name = name
@@ -265,7 +273,8 @@ class Puppy(Dog):
                     <h2>References</h2>
                     <ul>
                         <li><a href="https://docs.python.org/3/" target="_blank">Official Python Documentation</a></li>
-                        <li><a href="https://peps.python.org/pep-0008/" target="_blank">PEP 8 - Style Guide for Python Code</a></li>
+                        <li><a href="https://peps.python.org/pep-0008/" target="_blank">PEP 8 - Style Guide for Python
+                                Code</a></li>
                         <li><a href="https://realpython.com/" target="_blank">Real Python Tutorials</a></li>
                     </ul>
                 </div>
@@ -329,6 +338,8 @@ class Puppy(Dog):
     </footer>
 
     <script src="../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
 </body>
 
 </html>

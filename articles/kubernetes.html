@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kubernetes Basics - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Kubernetes</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Kubernetes Orchestration</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">DevOps</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 25 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Kubernetes (K8s) is an open-source system for automating deployment, scaling, and management of
+                        containerized applications.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>It groups containers that make up an application into logical units for easy management and
+                        discovery. Kubernetes builds upon 15 years of experience of running production workloads at
+                        Google.</p>
+
+                    <h2 id="architecture">Architecture</h2>
+                    <p>A Kubernetes cluster consists of a set of worker machines, called nodes, that run containerized
+                        applications. Every cluster has at least one worker node.</p>
+
+                    <h3 id="control-plane">Control Plane</h3>
+                    <p>The control plane manages the worker nodes and the Pods in the cluster. In production
+                        environments, the control plane usually runs across multiple computers.</p>
+
+                    <h3 id="nodes">Nodes</h3>
+                    <p>Worker nodes host the Pods that are the components of the application workload.</p>
+
+                    <h2 id="objects">Kubernetes Objects</h2>
+                    <p>Objects are persistent entities in the Kubernetes system. Kubernetes uses these entities to
+                        represent the state of your cluster.</p>
+
+                    <h3 id="pods">Pods</h3>
+                    <p>The smallest and simplest Kubernetes object. A Pod represents a set of running containers on your
+                        cluster.</p>
+
+                    <h3 id="services">Services</h3>
+                    <p>An abstract way to expose an application running on a set of Pods as a network service.</p>
+
+                    <h3 id="deployments">Deployments</h3>
+                    <p>Provides declarative updates for Pods and ReplicaSets. You describe a desired state in a
+                        Deployment, and the Deployment Controller changes the actual state to the desired state at a
+                        controlled rate.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">YAML</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80</code></pre>
+                    </div>
+
+                    <h2 id="key-features">Key Features</h2>
+                    <ul>
+                        <li><strong>Service discovery and load balancing</strong>: Kubernetes can expose a container
+                            using the DNS name or using their own IP address.</li>
+                        <li><strong>Storage orchestration</strong>: Automatically mount a storage system of your choice.
+                        </li>
+                        <li><strong>Automated rollouts and rollbacks</strong>: Describe the desired state for your
+                            deployed containers.</li>
+                        <li><strong>Self-healing</strong>: Restarts containers that fail, replaces containers, kills
+                            containers that don't respond to your user-defined health check.</li>
+                    </ul>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://kubernetes.io/docs/home/" target="_blank">Kubernetes Documentation</a></li>
+                        <li><a href="https://github.com/kubernetes/kubernetes" target="_blank">Kubernetes GitHub</a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="docker.html" class="related-link">
+                        <strong>Docker</strong>
+                        Containerization
+                    </a>
+                    <a href="cloud-computing.html" class="related-link">
+                        <strong>Cloud Computing</strong>
+                        Infrastructure
+                    </a>
+                    <a href="devops.html" class="related-link">
+                        <strong>DevOps</strong>
+                        Overview
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>

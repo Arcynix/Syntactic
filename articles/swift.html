@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swift Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Swift</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Swift: Fast, Safe, Expressive</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Swift is a powerful and intuitive programming language for iOS, iPadOS, macOS, tvOS, and watchOS.
+                    </p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Swift is a result of the latest research on programming languages, combined with decades of
+                        experience building Apple platforms.</p>
+
+                    <h2 id="basics">Basics</h2>
+                    <p>Swift is easy to read and write, with a syntax that's clean and concise.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Swift</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-swift">let message = "Hello, Swift!"
+var count = 10
+count += 1
+
+print("\(message) Count is \(count)")</code></pre>
+                    </div>
+
+                    <h2 id="optionals">Optionals</h2>
+                    <p>Optionals are a powerful feature in Swift that handle the absence of a value.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Swift</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-swift">var optionalName: String? = "John Doe"
+optionalName = nil
+
+if let name = optionalName {
+    print("Hello, \(name)")
+} else {
+    print("Hello, Guest")
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://swift.org/documentation/" target="_blank">Swift Documentation</a></li>
+                        <li><a href="https://developer.apple.com/swift/" target="_blank">Swift for Developers</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="ios-dev.html" class="related-link">
+                        <strong>iOS Dev</strong>
+                        Getting Started
+                    </a>
+                    <a href="swiftui.html" class="related-link">
+                        <strong>SwiftUI</strong>
+                        Modern UI
+                    </a>
+                    <a href="objective-c.html" class="related-link">
+                        <strong>Objective-C</strong>
+                        Legacy Code
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-swift.min.js"></script>
+</body>
+
+</html>

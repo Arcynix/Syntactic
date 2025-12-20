@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Guide - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Docker</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Docker & Containerization</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">DevOps</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 15 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Docker is an open-source platform that automates the deployment, scaling, and management of applications using containerization. It allows developers to package applications with all their dependencies into a single unit called a container.</p>
+
+                    <h2 id="what-is-containerization">What is Containerization?</h2>
+                    <p>Containerization is a form of operating system virtualization where applications run in isolated user spaces called containers. Unlike Virtual Machines (VMs), containers share the host system's kernel, making them much more lightweight and efficient.</p>
+
+                    <h2 id="core-concepts">Core Concepts</h2>
+                    <p>To understand Docker, you need to be familiar with its three main components:</p>
+
+                    <h3 id="docker-images">Docker Images</h3>
+                    <p>An image is a read-only template with instructions for creating a Docker container. It includes the application code, libraries, and environment variables.</p>
+
+                    <h3 id="docker-containers">Docker Containers</h3>
+                    <p>A container is a runnable instance of an image. You can create, start, stop, move, or delete a container using the Docker API or CLI.</p>
+
+                    <h3 id="dockerfile">Dockerfile</h3>
+                    <p>A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Dockerfile</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code># Use an official Node runtime as a parent image
+FROM node:18-alpine
+
+# Set the working directory in the container
+WORKDIR /app
+
+# Copy package.json and package-lock.json
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the application code
+COPY . .
+
+# Expose the port the app runs on
+EXPOSE 3000
+
+# Define the command to run the app
+CMD ["npm", "start"]</code></pre>
+                    </div>
+
+                    <h2 id="basic-commands">Basic Commands</h2>
+                    <p>Commonly used Docker CLI commands for managing images and containers:</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Bash</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code># Build an image from a Dockerfile
+docker build -t my-app .
+
+# Run a container from an image
+docker run -p 3000:3000 my-app
+
+# List running containers
+docker ps
+
+# Stop a running container
+docker stop <container_id>
+
+# Remove a container
+docker rm <container_id></code></pre>
+                    </div>
+
+                    <h2 id="docker-compose">Docker Compose</h2>
+                    <p>Docker Compose is a tool for defining and running multi-container Docker applications. You use a YAML file to configure your application's services.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">YAML</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>version: '3.8'
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres:15
+    environment:
+      POSTGRES_PASSWORD: example</code></pre>
+                    </div>
+
+                    <h2 id="benefits">Benefits of Docker</h2>
+                    <ul>
+                        <li><strong>Consistency</strong>: "It works on my machine" is no longer an issue.</li>
+                        <li><strong>Isolation</strong>: Applications run in their own environments.</li>
+                        <li><strong>Portability</strong>: Run containers on any system that supports Docker.</li>
+                        <li><strong>Efficiency</strong>: Fast startup times and low resource overhead.</li>
+                    </ul>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://docs.docker.com/" target="_blank">Docker Official Documentation</a></li>
+                        <li><a href="https://hub.docker.com/" target="_blank">Docker Hub</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="kubernetes.html" class="related-link">
+                        <strong>Kubernetes</strong>
+                        Orchestration
+                    </a>
+                    <a href="ci-cd.html" class="related-link">
+                        <strong>CI/CD</strong>
+                        Automation
+                    </a>
+                    <a href="devops.html" class="related-link">
+                        <strong>DevOps</strong>
+                        Overview
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js"></script>
+</body>
+
+</html>
