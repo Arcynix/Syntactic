@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (hamburger) {
         hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
         });
     }
@@ -33,7 +34,147 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Highlight active TOC item on scroll
     highlightTOCOnScroll();
+
+    // Initialize Rich Navigation
+    initializeNavigation();
 });
+
+// Dynamic Navigation Injection
+function initializeNavigation() {
+    const navMenu = document.querySelector('.nav-menu');
+    if (!navMenu) return;
+
+    // Determine project root relative to current page
+    const currentPath = window.location.pathname;
+    const isTopicPage = currentPath.includes('/topics/');
+    const isArticlePage = currentPath.includes('/articles/');
+    const isRootHome = currentPath.endsWith('home.html') || currentPath.endsWith('/');
+    const rootPath = (isTopicPage || isArticlePage) ? '../' : '';
+
+    const menuContent = `
+        <!-- Desktop/Common Navigation -->
+        <div class="nav-item has-dropdown">
+            <a href="${rootPath}articles.html" class="nav-link">Articles</a>
+            <div class="mega-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-column">
+                        <h4>Popular Articles</h4>
+                        <a href="${rootPath}articles/python.html">Python</a>
+                        <a href="${rootPath}articles/javascript.html">JavaScript</a>
+                        <a href="${rootPath}articles/react.html">React</a>
+                        <a href="${rootPath}articles/sql.html">SQL</a>
+                    </div>
+                    <div class="dropdown-column">
+                        <h4>Core Concepts</h4>
+                        <a href="${rootPath}articles/data-structures.html">Data Structures</a>
+                        <a href="${rootPath}articles/design-patterns.html">Design Patterns</a>
+                        <a href="${rootPath}articles/clean-code.html">Clean Code</a>
+                        <a href="${rootPath}articles/rest-api.html">APIs</a>
+                    </div>
+                    <div class="dropdown-column">
+                        <h4>Operations</h4>
+                        <a href="${rootPath}articles/git.html">Git</a>
+                        <a href="${rootPath}articles/docker.html">Docker</a>
+                        <a href="${rootPath}articles/kubernetes.html">K8s</a>
+                        <a href="${rootPath}articles/unit-testing.html">Testing</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+            <a href="${rootPath}topics.html" class="nav-link">Topics</a>
+            <div class="mega-dropdown">
+                <div class="dropdown-content">
+                    <div class="dropdown-column">
+                        <h4>Development</h4>
+                        <a href="${rootPath}topics/web-development.html">Web Development</a>
+                        <a href="${rootPath}topics/frontend.html">Frontend</a>
+                        <a href="${rootPath}topics/backend.html">Backend</a>
+                        <a href="${rootPath}topics/mobile.html">Mobile App Dev</a>
+                    </div>
+                    <div class="dropdown-column">
+                        <h4>Infrastructure</h4>
+                        <a href="${rootPath}topics/cloud.html">Cloud Computing</a>
+                        <a href="${rootPath}topics/devops.html">DevOps</a>
+                        <a href="${rootPath}topics/databases.html">Databases</a>
+                        <a href="${rootPath}topics/security.html">Security</a>
+                    </div>
+                    <div class="dropdown-column">
+                        <h4>Cutting Edge</h4>
+                        <a href="${rootPath}topics/ai-ml.html">AI & ML</a>
+                        <a href="${rootPath}topics/data-science.html">Data Science</a>
+                        <a href="${rootPath}topics/blockchain.html">Blockchain</a>
+                        <a href="${rootPath}topics/game-development.html">Game Dev</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-item">
+            <a href="${rootPath}community.html" class="nav-link">Community</a>
+        </div>
+
+        <!-- Mobile-Only Sidebar Sections (Hidden on Desktop via CSS) -->
+        <div class="mobile-only-overlay">
+            <div class="menu-section main-links">
+                <a href="${rootPath}home.html">Home</a>
+                <a href="${rootPath}articles.html">Articles</a>
+                <a href="${rootPath}topics.html">Topics</a>
+                <a href="${rootPath}community.html">Community</a>
+            </div>
+
+            <div class="menu-section">
+                <h4 class="menu-section-title">Explore Topics</h4>
+                <div class="menu-grid">
+                    <a href="${rootPath}topics/web-development.html">Web Dev</a>
+                    <a href="${rootPath}topics/backend.html">Backend</a>
+                    <a href="${rootPath}topics/frontend.html">Frontend</a>
+                    <a href="${rootPath}topics/ai-ml.html">AI & ML</a>
+                    <a href="${rootPath}topics/cloud.html">Cloud</a>
+                    <a href="${rootPath}topics/security.html">Security</a>
+                    <a href="${rootPath}topics/databases.html">Databases</a>
+                    <a href="${rootPath}topics/devops.html">DevOps</a>
+                    <a href="${rootPath}topics/data-science.html">Data Science</a>
+                    <a href="${rootPath}topics/blockchain.html">Blockchain</a>
+                    <a href="${rootPath}topics/game-development.html">Game Dev</a>
+                    <a href="${rootPath}topics/mobile.html">Mobile</a>
+                </div>
+            </div>
+
+            <div class="menu-section">
+                <h4 class="menu-section-title">Popular Guides</h4>
+                <div class="menu-grid">
+                    <a href="${rootPath}articles/python.html">Python</a>
+                    <a href="${rootPath}articles/javascript.html">JavaScript</a>
+                    <a href="${rootPath}articles/react.html">React</a>
+                    <a href="${rootPath}articles/sql.html">SQL</a>
+                    <a href="${rootPath}articles/git.html">Git</a>
+                    <a href="${rootPath}articles/docker.html">Docker</a>
+                    <a href="${rootPath}articles/kubernetes.html">K8s</a>
+                    <a href="${rootPath}articles/rust.html">Rust</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    `;
+
+    navMenu.innerHTML = menuContent;
+
+    // Re-attach hamburger listener since we just replaced the element
+    const hamburger = navMenu.querySelector('.hamburger');
+    if (hamburger) {
+        hamburger.addEventListener('click', function () {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+    }
+}
 
 // Generate Table of Contents from h2 and h3 headings
 function generateTableOfContents() {
@@ -124,35 +265,51 @@ async function initializeSearch() {
     const isArticlePage = currentPath.includes('/articles/');
     const rootPath = (isTopicPage || isArticlePage) ? '../' : '';
 
+    let articles = [];
+
     try {
+        // Try fetching JSON first
         const response = await fetch(`${rootPath}data/articles.json`);
-        const articles = await response.json();
-
-        searchInputs.forEach(input => {
-            input.addEventListener('input', (e) => {
-                const query = e.target.value.toLowerCase();
-                if (query.length < 2) {
-                    hideSearchResults();
-                    return;
-                }
-                const results = articles.filter(article =>
-                    article.title.toLowerCase().includes(query) ||
-                    article.description.toLowerCase().includes(query) ||
-                    article.tags.some(tag => tag.toLowerCase().includes(query))
-                );
-                showSearchResults(results, input, rootPath);
-            });
-
-            // Hide results when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!input.contains(e.target) && !document.querySelector('.search-results-dropdown')?.contains(e.target)) {
-                    hideSearchResults();
-                }
-            });
-        });
+        articles = await response.json();
     } catch (error) {
-        console.error('Error loading search data:', error);
+        console.warn('Fetch failed, attempting to load articles.js fallback:', error);
+        // Fallback for local file access (CORS)
+        try {
+            articles = await new Promise((resolve, reject) => {
+                const script = document.createElement('script');
+                script.src = `${rootPath}data/articles.js`;
+                script.onload = () => resolve(window.articleData);
+                script.onerror = () => reject(new Error('Failed to load fallback script'));
+                document.head.appendChild(script);
+            });
+        } catch (fallbackError) {
+            console.error('All search data loading methods failed:', fallbackError);
+            return;
+        }
     }
+
+    searchInputs.forEach(input => {
+        input.addEventListener('input', (e) => {
+            const query = e.target.value.toLowerCase();
+            if (query.length < 2) {
+                hideSearchResults();
+                return;
+            }
+            const results = articles.filter(article =>
+                article.title.toLowerCase().includes(query) ||
+                article.description.toLowerCase().includes(query) ||
+                article.tags.some(tag => tag.toLowerCase().includes(query))
+            );
+            showSearchResults(results, input, rootPath);
+        });
+
+        // Hide results when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!input.contains(e.target) && !document.querySelector('.search-results-dropdown')?.contains(e.target)) {
+                hideSearchResults();
+            }
+        });
+    });
 }
 
 function showSearchResults(results, input, rootPath) {

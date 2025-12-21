@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="styles/home.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -22,9 +24,41 @@
                 </div>
             </div>
             <div class="nav-menu">
-                <a href="articles.html">Articles</a>
-                <a href="topics.html">Topics</a>
-                <a href="community.html">Community</a>
+                <!-- Main Navigation -->
+                <div class="menu-section main-links">
+                    <a href="articles.html">Articles</a>
+                    <a href="topics.html">Topics</a>
+                    <a href="community.html">Community</a>
+                </div>
+
+                <!-- Explore Topics -->
+                <div class="menu-section">
+                    <h4 class="menu-section-title">Explore Topics</h4>
+                    <div class="menu-grid">
+                        <a href="topics/web-development.html">Web Dev</a>
+                        <a href="topics/backend.html">Backend</a>
+                        <a href="topics/frontend.html">Frontend</a>
+                        <a href="topics/ai-ml.html">AI & ML</a>
+                        <a href="topics/cloud.html">Cloud</a>
+                        <a href="topics/security.html">Security</a>
+                        <a href="topics/databases.html">Databases</a>
+                        <a href="topics/devops.html">DevOps</a>
+                    </div>
+                </div>
+
+                <!-- Popular Guides -->
+                <div class="menu-section">
+                    <h4 class="menu-section-title">Popular Guides</h4>
+                    <div class="menu-grid">
+                        <a href="articles/python.html">Python</a>
+                        <a href="articles/javascript.html">JavaScript</a>
+                        <a href="articles/react.html">React</a>
+                        <a href="articles/sql.html">SQL</a>
+                        <a href="articles/git.html">Git</a>
+                        <a href="articles/docker.html">Docker</a>
+                    </div>
+                </div>
+
                 <div class="hamburger">
                     <span></span>
                     <span></span>
@@ -36,15 +70,17 @@
         <main class="hero">
             <div class="hero-content">
                 <h1 class="main-title">Syntactic</h1>
-                
+
                 <div class="content-grid">
                     <div class="action-card">
                         <h2>LEARN<br>CODE...</h2>
                     </div>
-                    
+
                     <div class="text-content">
                         <h2>The Free Coding Encyclopedia.</h2>
-                        <p>Syntactic is the world's largest open-source coding knowledge base. From basic syntax to advanced algorithms, we provide comprehensive, community-driven documentation on every programming concept.</p>
+                        <p>Syntactic is the world's largest open-source coding knowledge base. From basic syntax to
+                            advanced algorithms, we provide comprehensive, community-driven documentation on every
+                            programming concept.</p>
                         <div class="stats-row">
                             <div class="stat"><span class="stat-num">5K+</span><br>Articles</div>
                             <div class="stat"><span class="stat-num">50+</span><br>Languages</div>
@@ -85,15 +121,18 @@
         <div class="features-grid">
             <div class="feature-card">
                 <h3>Comprehensive Articles</h3>
-                <p>Deep-dive documentation on every programming language framework, and concept. Written and maintained by the developer community.</p>
+                <p>Deep-dive documentation on every programming language framework, and concept. Written and maintained
+                    by the developer community.</p>
             </div>
             <div class="feature-card">
                 <h3>Code Examples</h3>
-                <p>Real-world code snippets and implementations for every topic. Copy, learn, and adapt for your projects.</p>
+                <p>Real-world code snippets and implementations for every topic. Copy, learn, and adapt for your
+                    projects.</p>
             </div>
             <div class="feature-card">
                 <h3>Always Updated</h3>
-                <p>Community contributions ensure our content stays current with the latest versions, best practices, and emerging technologies.</p>
+                <p>Community contributions ensure our content stays current with the latest versions, best practices,
+                    and emerging technologies.</p>
             </div>
         </div>
     </section>
@@ -210,6 +249,7 @@
             <p>&copy; 2024 Syntactic. All rights reserved.</p>
         </div>
     </footer>
+    <script src="scripts/main.js"></script>
 </body>
 
 </html>
