@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntactic - Topics</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/profile_menu.css">
+    <link rel="stylesheet" href="styles/topics.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/auth.js"></script>
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <!-- Main Navigation -->
+                <div class="menu-section main-links">
+                    <a href="home.html">Home</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="topics.html" class="active">Topics</a>
+                    <a href="community.html">Community</a>
+                </div>
+
+                <!-- Explore Topics -->
+                <div class="menu-section">
+                    <h4 class="menu-section-title">Explore Topics</h4>
+                    <div class="menu-grid">
+                        <a href="topics/web-development.html">Web Dev</a>
+                        <a href="topics/backend.html">Backend</a>
+                        <a href="topics/frontend.html">Frontend</a>
+                        <a href="topics/ai-ml.html">AI & ML</a>
+                        <a href="topics/cloud.html">Cloud</a>
+                        <a href="topics/security.html">Security</a>
+                        <a href="topics/databases.html">Databases</a>
+                        <a href="topics/devops.html">DevOps</a>
+                    </div>
+                </div>
+
+                <!-- Popular Guides -->
+                <div class="menu-section">
+                    <h4 class="menu-section-title">Popular Guides</h4>
+                    <div class="menu-grid">
+                        <a href="articles/python.html">Python</a>
+                        <a href="articles/javascript.html">JavaScript</a>
+                        <a href="articles/react.html">React</a>
+                        <a href="articles/sql.html">SQL</a>
+                        <a href="articles/git.html">Git</a>
+                        <a href="articles/docker.html">Docker</a>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="home.html">Home</a>
+            <span>›</span>
+            <span class="current">Topics</span>
+        </div>
+
+        <main class="page-content">
+            <h1 class="page-title">Knowledge Hubs.</h1>
+            <p class="page-subtitle">Curated collections of articles organized by domain and technology stack.</p>
+
+            <div class="topics-grid">
+                <!-- Topic 1 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🎨</div>
+                    <h3>Frontend Development</h3>
+                    <p>UI/UX, React, CSS, and modern web interfaces.</p>
+                    <a href="topics/frontend.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 2 -->
+                <div class="topic-card">
+                    <div class="topic-icon">⚙️</div>
+                    <h3>Backend Development</h3>
+                    <p>Server-side logic, APIs, and system architecture.</p>
+                    <a href="topics/backend.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 3 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🚀</div>
+                    <h3>DevOps & Infrastructure</h3>
+                    <p>CI/CD, Docker, Kubernetes, and automation.</p>
+                    <a href="topics/devops.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 4 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🛡️</div>
+                    <h3>Security</h3>
+                    <p>Web security, encryption, and best practices.</p>
+                    <a href="topics/security.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 5 -->
+                <div class="topic-card">
+                    <div class="topic-icon">📱</div>
+                    <h3>Mobile Development</h3>
+                    <p>iOS, Android, and cross-platform apps.</p>
+                    <a href="topics/mobile.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 6 -->
+                <div class="topic-card">
+                    <div class="topic-icon">📊</div>
+                    <h3>Data Science</h3>
+                    <p>Analysis, visualization, and statistical modeling.</p>
+                    <a href="topics/data-science.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 7 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🗄️</div>
+                    <h3>Databases</h3>
+                    <p>SQL, NoSQL, and data storage solutions.</p>
+                    <a href="topics/databases.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 8 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🌐</div>
+                    <h3>Web Development</h3>
+                    <p>Core web technologies and standards.</p>
+                    <a href="topics/web-development.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 9 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🎮</div>
+                    <h3>Game Development</h3>
+                    <p>Engines, math, and graphics for games.</p>
+                    <a href="topics/game-development.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 10 -->
+                <div class="topic-card">
+                    <div class="topic-icon">⛓️</div>
+                    <h3>Blockchain</h3>
+                    <p>Decentralized apps and smart contracts.</p>
+                    <a href="topics/blockchain.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 11 -->
+                <div class="topic-card">
+                    <div class="topic-icon">☁️</div>
+                    <h3>Cloud Computing</h3>
+                    <p>AWS, Azure, GCP, and cloud infrastructure.</p>
+                    <a href="topics/cloud.html" class="topic-link">View Hub →</a>
+                </div>
+
+                <!-- Topic 12 -->
+                <div class="topic-card">
+                    <div class="topic-icon">🤖</div>
+                    <h3>AI & Machine Learning</h3>
+                    <p>Neural networks, NLP, and computer vision.</p>
+                    <a href="topics/ai-ml.html" class="topic-link">View Hub →</a>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="topics.html">Topics</a>
+                <a href="community.html">Contribute</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="coming-soon.html?feature=Privacy%20Policy">Privacy Policy</a>
+                <a href="coming-soon.html?feature=Terms%20of%20Service">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js?v=2"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PostgreSQL Guide - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">PostgreSQL</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">PostgreSQL: The World's Most Advanced Open Source Database</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Database</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>PostgreSQL is a powerful, open source object-relational database system with over 35 years of
+                        active development that has earned it a strong reputation for reliability, feature robustness,
+                        and performance.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>PostgreSQL comes with many features aimed to help developers build applications, administrators
+                        to protect data integrity and build fault-tolerant environments, and help you manage your data
+                        no matter how big or small the dataset.</p>
+
+                    <h2 id="jsonb">JSONB Support</h2>
+                    <p>One of PostgreSQL's most powerful features is its support for JSON data, allowing for
+                        semi-structured data storage within a relational database.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">SQL</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-sql">-- Create table with JSONB column
+CREATE TABLE products (
+    id serial PRIMARY KEY,
+    name text NOT NULL,
+    attributes jsonb
+);
+
+-- Query JSONB data
+SELECT name FROM products 
+WHERE attributes ->> 'color' = 'red';</code></pre>
+                    </div>
+
+                    <h2 id="window-functions">Window Functions</h2>
+                    <p>Window functions perform a calculation across a set of table rows that are somehow related to the
+                        current row.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">SQL</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-sql">SELECT name, salary,
+       avg(salary) OVER (PARTITION BY department)
+FROM employees;</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://www.postgresql.org/docs/" target="_blank">Official PostgreSQL
+                                Documentation</a></li>
+                        <li><a href="https://postgresqltutorial.com/" target="_blank">PostgreSQL Tutorial</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="sql.html" class="related-link">
+                        <strong>SQL Basics</strong>
+                        Foundation
+                    </a>
+                    <a href="indexing.html" class="related-link">
+                        <strong>Indexing</strong>
+                        Performance
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-sql.min.js"></script>
+</body>
+
+</html>

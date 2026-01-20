@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unit Testing Best Practices - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Unit Testing</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Unit Testing Best Practices</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Testing</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 18 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Unit testing is a software testing method by which individual units of source code are tested to
+                        determine whether they are fit for use.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>A unit is the smallest testable part of any software. It usually has one or a few inputs and
+                        usually a single output.</p>
+
+                    <h2 id="why-test">Why Unit Test?</h2>
+                    <ul>
+                        <li><strong>Find Bugs Early</strong>: Catch issues before they reach production.</li>
+                        <li><strong>Facilitate Change</strong>: Refactor code with confidence.</li>
+                        <li><strong>Documentation</strong>: Tests serve as documentation for how code should behave.
+                        </li>
+                        <li><strong>Design Improvement</strong>: Writing tests often leads to better code architecture.
+                        </li>
+                    </ul>
+
+                    <h2 id="aaa-pattern">The AAA Pattern</h2>
+                    <p>The AAA (Arrange, Act, Assert) pattern is a common way of writing unit tests.</p>
+                    <ul>
+                        <li><strong>Arrange</strong>: Set up the conditions for the test.</li>
+                        <li><strong>Act</strong>: Execute the code being tested.</li>
+                        <li><strong>Assert</strong>: Verify that the result is what you expected.</li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript (Jest)</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>test('adds 1 + 2 to equal 3', () => {
+  // Arrange
+  const a = 1;
+  const b = 2;
+
+  // Act
+  const result = add(a, b);
+
+  // Assert
+  expect(result).toBe(3);
+});</code></pre>
+                    </div>
+
+                    <h2 id="f-i-r-s-t">F.I.R.S.T. Principles</h2>
+                    <p>Effective unit tests should follow the F.I.R.S.T. principles:</p>
+                    <ul>
+                        <li><strong>Fast</strong>: Tests should run quickly.</li>
+                        <li><strong>Independent</strong>: Tests should not depend on each other.</li>
+                        <li><strong>Repeatable</strong>: Tests should yield the same results every time.</li>
+                        <li><strong>Self-Validating</strong>: Tests should clearly pass or fail.</li>
+                        <li><strong>Thorough</strong>: Tests should cover all edge cases.</li>
+                    </ul>
+
+                    <h2 id="mocking">Mocking and Dependency Injection</h2>
+                    <p>When a unit has dependencies (like a database or an API), you should "mock" those dependencies to
+                        isolate the unit being tested.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript (Jest)</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>// Mocking a module
+jest.mock('./api');
+import { fetchData } from './api';
+
+test('gets data successfully', async () => {
+  fetchData.mockResolvedValue({ id: 1, name: 'Test' });
+  const data = await getUser(1);
+  expect(data.name).toBe('Test');
+});</code></pre>
+                    </div>
+
+                    <h2 id="code-coverage">Code Coverage</h2>
+                    <p>Code coverage is a measure used to describe the degree to which the source code of a program is
+                        executed when a particular test suite runs.</p>
+                    <p><strong>Note:</strong> 100% coverage doesn't mean 0% bugs, but it's a good indicator of test
+                        thoroughness.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://jestjs.io/docs/getting-started" target="_blank">Jest Documentation</a></li>
+                        <li><a href="https://martinfowler.com/articles/practical-test-pyramid.html" target="_blank">The
+                                Practical Test Pyramid</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="clean-code.html" class="related-link">
+                        <strong>Clean Code</strong>
+                        Best Practices
+                    </a>
+                    <a href="ci-cd.html" class="related-link">
+                        <strong>CI/CD</strong>
+                        Automation
+                    </a>
+                    <a href="javascript.html" class="related-link">
+                        <strong>JavaScript</strong>
+                        Language Guide
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+</body>
+
+</html>

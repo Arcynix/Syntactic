@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rust Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Rust</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Rust: Safe, Fast, Productive</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 30 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Rust is a multi-paradigm, general-purpose programming language designed for performance and
+                        safety, especially safe concurrency.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Rust is syntactically similar to C++, but it can guarantee memory safety by using a borrow
+                        checker to validate references.</p>
+
+                    <h2 id="ownership">Ownership and Borrowing</h2>
+                    <p>Ownership is Rust's most unique feature, which enables Rust to make memory safety guarantees
+                        without needing a garbage collector.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Rust</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-rust">fn main() {
+    let s1 = String::from("hello");
+    let s2 = s1; // s1 is moved to s2
+
+    // println!("{}, world!", s1); // This would cause a compile error
+    println!("{}, world!", s2);
+}</code></pre>
+                    </div>
+
+                    <h2 id="concurrency">Concurrency</h2>
+                    <p>Rust's ownership and type systems are a powerful tool for helping to manage memory and
+                        concurrency problems.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Rust</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-rust">use std::thread;
+
+fn main() {
+    let handle = thread::spawn(|| {
+        println!("Hello from a thread!");
+    });
+
+    handle.join().unwrap();
+}</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://www.rust-lang.org/learn" target="_blank">Rust Learning Resources</a></li>
+                        <li><a href="https://doc.rust-lang.org/book/" target="_blank">The Rust Programming Language
+                                Book</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="cpp.html" class="related-link">
+                        <strong>C++</strong>
+                        Comparison
+                    </a>
+                    <a href="systems.html" class="related-link">
+                        <strong>Systems</strong>
+                        Programming
+                    </a>
+                    <a href="wasm.html" class="related-link">
+                        <strong>WebAssembly</strong>
+                        Rust & WASM
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-rust.min.js"></script>
+</body>
+
+</html>

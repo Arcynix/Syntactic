@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Java</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Java Programming Language</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 30 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Java is a high-level, class-based, object-oriented programming language that is designed to have
+                        as few implementation dependencies as possible.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Java was originally developed by James Gosling at Sun Microsystems and released in 1995. It is
+                        based on the principle of "Write Once, Run Anywhere" (WORA), meaning that compiled Java code can
+                        run on all platforms that support Java without the need for recompilation.</p>
+
+                    <h2 id="core-concepts">Core Concepts</h2>
+                    <h3 id="jvm">Java Virtual Machine (JVM)</h3>
+                    <p>The JVM is an engine that provides a runtime environment to drive the Java Code or applications.
+                        It converts Java bytecode into machine language.</p>
+
+                    <h3 id="oop">Object-Oriented Programming</h3>
+                    <p>Java is strictly object-oriented. Everything in Java is an Object. The four main pillars of OOP
+                        in Java are:</p>
+                    <ul>
+                        <li><strong>Encapsulation</strong></li>
+                        <li><strong>Inheritance</strong></li>
+                        <li><strong>Polymorphism</strong></li>
+                        <li><strong>Abstraction</strong></li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Java</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>public class HelloWorld {
+    public static void main(String[] args) {
+        System.out.println("Hello, Syntactic!");
+    }
+}</code></pre>
+                    </div>
+
+                    <h2 id="syntax">Syntax and Structure</h2>
+                    <p>Java syntax is similar to C++, but it has fewer low-level facilities. Java code is always
+                        organized into classes.</p>
+
+                    <h3 id="data-types">Data Types</h3>
+                    <p>Java has two categories of data types:</p>
+                    <ul>
+                        <li><strong>Primitive Types</strong>: int, double, boolean, char, etc.</li>
+                        <li><strong>Reference Types</strong>: Objects, Arrays, Strings.</li>
+                    </ul>
+
+                    <h2 id="ecosystem">The Java Ecosystem</h2>
+                    <p>Java has a vast ecosystem of libraries and frameworks:</p>
+                    <ul>
+                        <li><strong>Spring Framework</strong>: For enterprise applications.</li>
+                        <li><strong>Hibernate</strong>: For ORM.</li>
+                        <li><strong>Maven/Gradle</strong>: For build automation.</li>
+                    </ul>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://docs.oracle.com/en/java/" target="_blank">Official Java Documentation</a>
+                        </li>
+                        <li><a href="https://www.java.com/" target="_blank">Java.com</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="spring.html" class="related-link">
+                        <strong>Spring</strong>
+                        Enterprise Java
+                    </a>
+                    <a href="oop.html" class="related-link">
+                        <strong>OOP</strong>
+                        Core Concepts
+                    </a>
+                    <a href="backend.html" class="related-link">
+                        <strong>Backend</strong>
+                        Development
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+</body>
+
+</html>

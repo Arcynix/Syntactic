@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blockchain Basics - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Blockchain</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Blockchain Basics: Decentralized Trust</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Blockchain</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 15 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>A blockchain is a distributed ledger that records transactions across many computers so that the
+                        record cannot be altered retroactively.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Blockchain technology allows for decentralized trust, meaning that no single entity has control
+                        over the entire network. This is achieved through consensus mechanisms and cryptography.</p>
+
+                    <h2 id="how-it-works">How it Works</h2>
+                    <p>Transactions are grouped into "blocks", and each block contains a cryptographic hash of the
+                        previous block, creating a "chain".</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JSON</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-json">{
+    "index": 1,
+    "timestamp": "2024-12-20T14:45:30Z",
+    "transactions": [
+        {
+            "sender": "Alice",
+            "recipient": "Bob",
+            "amount": 10
+        }
+    ],
+    "previous_hash": "0000000000000000",
+    "hash": "a1b2c3d4e5f6g7h8"
+}</code></pre>
+                    </div>
+
+                    <h2 id="consensus">Consensus Mechanisms</h2>
+                    <p>Consensus mechanisms like Proof of Work (PoW) and Proof of Stake (PoS) ensure that all nodes in
+                        the network agree on the state of the ledger.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Bitcoin Whitepaper</a></li>
+                        <li><a href="https://ethereum.org/en/whitepaper/" target="_blank">Ethereum Whitepaper</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="ethereum.html" class="related-link">
+                        <strong>Ethereum</strong>
+                        Smart Contracts
+                    </a>
+                    <a href="cryptography.html" class="related-link">
+                        <strong>Cryptography</strong>
+                        Security
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+
+</html>

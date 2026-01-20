@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C++ Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">C++</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">C++ Programming Language</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 35 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>C++ is a powerful general-purpose programming language. It can be used to develop operating
+                        systems, browsers, games, and so on.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>C++ was developed by Bjarne Stroustrup at Bell Labs in 1979 as an extension of the C language. It
+                        supports different ways of programming like procedural, object-oriented, functional, and so on.
+                    </p>
+
+                    <h2 id="key-features">Key Features</h2>
+                    <ul>
+                        <li><strong>Performance</strong>: C++ is known for its high performance and efficiency.</li>
+                        <li><strong>Manual Memory Management</strong>: Gives developers control over memory allocation
+                            and deallocation.</li>
+                        <li><strong>STL (Standard Template Library)</strong>: A powerful library of containers and
+                            algorithms.</li>
+                        <li><strong>Multi-paradigm</strong>: Supports both procedural and object-oriented programming.
+                        </li>
+                    </ul>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">C++</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>#include <iostream>
+
+int main() {
+    std::cout << "Hello, C++ World!" << std::endl;
+    return 0;
+}</code></pre>
+                    </div>
+
+                    <h2 id="memory-management">Memory Management</h2>
+                    <p>One of the most critical aspects of C++ is how it handles memory. Developers use `new` and
+                        `delete` for dynamic memory allocation, or smart pointers in modern C++ (C++11 and later).</p>
+
+                    <h3 id="pointers">Pointers and References</h3>
+                    <p>Pointers are variables that store memory addresses. References are aliases for existing
+                        variables.</p>
+
+                    <h2 id="modern-cpp">Modern C++</h2>
+                    <p>Modern C++ (C++11, C++14, C++17, C++20) introduced many features to make the language safer and
+                        easier to use:</p>
+                    <ul>
+                        <li><strong>Auto keyword</strong>: Type inference.</li>
+                        <li><strong>Lambda expressions</strong>: Anonymous functions.</li>
+                        <li><strong>Smart pointers</strong>: unique_ptr, shared_ptr.</li>
+                        <li><strong>Ranges</strong>: New way to work with collections.</li>
+                    </ul>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://isocpp.org/" target="_blank">Standard C++ Foundation</a></li>
+                        <li><a href="https://en.cppreference.com/" target="_blank">C++ Reference</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="c-language.html" class="related-link">
+                        <strong>C Language</strong>
+                        The Foundation
+                    </a>
+                    <a href="game-dev.html" class="related-link">
+                        <strong>Game Dev</strong>
+                        C++ in Games
+                    </a>
+                    <a href="systems.html" class="related-link">
+                        <strong>Systems</strong>
+                        Programming
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+</body>
+
+</html>

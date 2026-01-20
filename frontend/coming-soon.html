@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon - Syntactic</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/profile_menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/auth.js"></script>
+    <style>
+        .coming-soon-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 60vh;
+            text-align: center;
+            gap: 2rem;
+            padding: 4rem 2rem;
+        }
+
+        .coming-soon-icon {
+            font-size: 5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .coming-soon-title {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .coming-soon-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            line-height: 1.6;
+        }
+
+        .feature-name {
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 30px;
+            background-color: var(--primary-green);
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            margin-top: 2rem;
+        }
+
+        .back-btn:hover {
+            background-color: var(--primary-green-dark);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-md);
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-15px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <!-- Navigation will be injected by main.js -->
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <main class="page-content">
+            <div class="coming-soon-content">
+                <div class="coming-soon-icon">🚧</div>
+                <h1 class="coming-soon-title">Coming Soon</h1>
+                <p class="coming-soon-subtitle">
+                    We're currently working hard on <span id="feature-name" class="feature-name">this feature</span>.
+                    <br>Stay tuned for updates!
+                </p>
+                <a href="javascript:history.back()" class="back-btn">← Go Back</a>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="topics.html">Topics</a>
+                <a href="community.html">Contribute</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="coming-soon.html?feature=Privacy%20Policy">Privacy Policy</a>
+                <a href="coming-soon.html?feature=Terms%20of%20Service">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js?v=2"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const feature = urlParams.get('feature');
+
+            if (feature) {
+                // Decode URI component and replace safe characters
+                const featureName = decodeURIComponent(feature).replace(/[<>]/g, '');
+                const featureSpan = document.getElementById('feature-name');
+                if (featureSpan) {
+                    featureSpan.textContent = featureName;
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

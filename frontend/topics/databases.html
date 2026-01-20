@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Databases Hub - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/topics.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search database topics...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html" class="active">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../topics.html">Topics</a>
+            <span>›</span>
+            <span class="current">Databases</span>
+        </div>
+
+        <main class="page-content">
+            <h1 class="page-title">Database Systems</h1>
+            <p class="page-subtitle">Master SQL, NoSQL, and data modeling for scalable applications.</p>
+
+            <div class="pricing-grid">
+                <!-- Relational -->
+                <div class="pricing-card">
+                    <div class="card-tag">SQL</div>
+                    <h3>Relational (RDBMS)</h3>
+                    <p>Structured data storage.</p>
+                    <ul class="card-features">
+                        <li><a href="../articles/sql.html">SQL Essentials</a></li>
+                        <li><a href="../articles/postgresql.html">PostgreSQL Guide</a></li>
+                        <li><a href="../articles/mysql.html">MySQL Basics</a></li>
+                        <li><a href="../coming-soon.html">Normalization</a></li>
+                    </ul>
+                </div>
+
+                <!-- NoSQL -->
+                <div class="pricing-card featured">
+                    <div class="plan-tag">Modern</div>
+                    <h3>NoSQL</h3>
+                    <p>Flexible schema storage.</p>
+                    <ul class="card-features">
+                        <li><a href="../articles/mongodb.html">MongoDB Guide</a></li>
+                        <li><a href="../articles/redis.html">Redis Caching</a></li>
+                        <li><a href="../coming-soon.html">Apache Cassandra</a></li>
+                        <li><a href="../coming-soon.html">AWS DynamoDB</a></li>
+                    </ul>
+                </div>
+
+                <!-- Performance -->
+                <div class="pricing-card">
+                    <div class="card-tag">Optimization</div>
+                    <h3>Performance</h3>
+                    <p>Speed up your queries.</p>
+                    <ul class="card-features">
+                        <li><a href="../coming-soon.html">Indexing Strategies</a></li>
+                        <li><a href="../coming-soon.html">Query Optimization</a></li>
+                        <li><a href="../coming-soon.html">Sharding & Partitioning</a></li>
+                        <li><a href="../coming-soon.html">Replication Models</a></li>
+                    </ul>
+                </div>
+
+                <!-- Design -->
+                <div class="pricing-card">
+                    <div class="card-tag">Architecture</div>
+                    <h3>Data Modeling</h3>
+                    <p>Designing for the future.</p>
+                    <ul class="card-features">
+                        <li><a href="../articles/data-structures.html">Data Structures</a></li>
+                        <li><a href="../coming-soon.html">ER Diagrams</a></li>
+                        <li><a href="../coming-soon.html">ACID Properties</a></li>
+                        <li><a href="../coming-soon.html">CAP Theorem</a></li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+</body>
+
+</html>
+

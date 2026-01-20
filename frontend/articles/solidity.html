@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solidity Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Solidity</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Solidity: Smart Contract Language</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Blockchain</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 20 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Solidity is an object-oriented, high-level language for implementing smart contracts. It is
+                        influenced by C++, Python, and JavaScript.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Solidity is statically typed, supports inheritance, libraries, and complex user-defined types. It
+                        is designed to target the Ethereum Virtual Machine (EVM).</p>
+
+                    <h2 id="syntax">Basic Syntax</h2>
+                    <p>A Solidity file starts with a pragma directive to specify the compiler version.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Solidity</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-solidity">// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract SimpleStorage {
+    uint256 storedData;
+
+    function set(uint256 x) public {
+        storedData = x;
+    }
+
+    function get() public view returns (uint256) {
+        return storedData;
+    }
+}</code></pre>
+                    </div>
+
+                    <h2 id="data-types">Data Types</h2>
+                    <p>Solidity provides several elementary types: booleans, integers, addresses, and byte arrays. It
+                        also supports complex types like mappings and structs.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">Solidity</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-solidity">struct User {
+    string name;
+    address wallet;
+}
+
+mapping(address => User) public users;</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://docs.soliditylang.org/" target="_blank">Official Solidity Documentation</a>
+                        </li>
+                        <li><a href="https://cryptozombies.io/" target="_blank">CryptoZombies Interactive Tutorial</a>
+                        </li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="ethereum.html" class="related-link">
+                        <strong>Ethereum</strong>
+                        Platform
+                    </a>
+                    <a href="smart-contract-security.html" class="related-link">
+                        <strong>Contract Security</strong>
+                        Best Practices
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-solidity.min.js"></script>
+</body>
+
+</html>

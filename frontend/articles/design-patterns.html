@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design Patterns - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Design Patterns</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Software Design Patterns</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Software Engineering</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 22 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Design patterns are typical solutions to common problems in software design. Each pattern is like
+                        a blueprint that you can customize to solve a particular design problem in your code.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Unlike functions or libraries, you can't just copy and paste a pattern into your program. The
+                        pattern is not a specific piece of code, but a general concept for solving a particular problem.
+                    </p>
+
+                    <h2 id="classification">Classification of Patterns</h2>
+                    <p>Design patterns are usually divided into three main groups based on their purpose:</p>
+
+                    <h3 id="creational">Creational Patterns</h3>
+                    <p>These patterns provide various object creation mechanisms, which increase flexibility and reuse
+                        of existing code.</p>
+                    <ul>
+                        <li><strong>Singleton</strong>: Ensures a class has only one instance.</li>
+                        <li><strong>Factory Method</strong>: Provides an interface for creating objects in a superclass.
+                        </li>
+                        <li><strong>Abstract Factory</strong>: Produces families of related objects.</li>
+                    </ul>
+
+                    <h3 id="structural">Structural Patterns</h3>
+                    <p>These patterns explain how to assemble objects and classes into larger structures while keeping
+                        these structures flexible and efficient.</p>
+                    <ul>
+                        <li><strong>Adapter</strong>: Allows objects with incompatible interfaces to collaborate.</li>
+                        <li><strong>Decorator</strong>: Attaches new behaviors to objects by placing them inside wrapper
+                            objects.</li>
+                        <li><strong>Facade</strong>: Provides a simplified interface to a library or framework.</li>
+                    </ul>
+
+                    <h3 id="behavioral">Behavioral Patterns</h3>
+                    <p>These patterns take care of effective communication and the assignment of responsibilities
+                        between objects.</p>
+                    <ul>
+                        <li><strong>Observer</strong>: Defines a subscription mechanism to notify multiple objects about
+                            events.</li>
+                        <li><strong>Strategy</strong>: Defines a family of algorithms and makes them interchangeable.
+                        </li>
+                        <li><strong>Command</strong>: Turns a request into a stand-alone object.</li>
+                    </ul>
+
+                    <h2 id="singleton-example">Example: Singleton Pattern</h2>
+                    <p>The Singleton pattern ensures that a class has only one instance and provides a global point of
+                        access to it.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>class Database {
+  constructor() {
+    if (Database.instance) {
+      return Database.instance;
+    }
+    this.connection = "Connected to DB";
+    Database.instance = this;
+  }
+
+  query(sql) {
+    console.log(`Executing: ${sql}`);
+  }
+}
+
+const db1 = new Database();
+const db2 = new Database();
+console.log(db1 === db2); // true</code></pre>
+                    </div>
+
+                    <h2 id="observer-example">Example: Observer Pattern</h2>
+                    <p>The Observer pattern defines a one-to-many dependency between objects so that when one object
+                        changes state, all its dependents are notified.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>class Subject {
+  constructor() {
+    this.observers = [];
+  }
+
+  subscribe(observer) {
+    this.observers.push(observer);
+  }
+
+  notify(data) {
+    this.observers.forEach(observer => observer.update(data));
+  }
+}
+
+class Observer {
+  update(data) {
+    console.log(`Received update: ${data}`);
+  }
+}
+
+const subject = new Subject();
+const obs1 = new Observer();
+subject.subscribe(obs1);
+subject.notify("New data available!");</code></pre>
+                    </div>
+
+                    <h2 id="why-use-patterns">Why Use Patterns?</h2>
+                    <ul>
+                        <li><strong>Proven Solutions</strong>: They are tried and tested solutions to common problems.
+                        </li>
+                        <li><strong>Standardized Language</strong>: They provide a common vocabulary for developers.
+                        </li>
+                        <li><strong>Best Practices</strong>: They promote clean, maintainable, and scalable code.</li>
+                    </ul>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://refactoring.guru/design-patterns" target="_blank">Refactoring Guru - Design
+                                Patterns</a></li>
+                        <li><a href="https://en.wikipedia.org/wiki/Software_design_pattern" target="_blank">Wikipedia -
+                                Design Patterns</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="oop.html" class="related-link">
+                        <strong>OOP</strong>
+                        Object-Oriented Programming
+                    </a>
+                    <a href="clean-code.html" class="related-link">
+                        <strong>Clean Code</strong>
+                        Best Practices
+                    </a>
+                    <a href="architecture.html" class="related-link">
+                        <strong>Architecture</strong>
+                        System Design
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+</body>
+
+</html>

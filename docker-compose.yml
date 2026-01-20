@@ -1,0 +1,49 @@
+version: '3.8'
+
+services:
+  # Frontend Service (Nginx serving static files)
+  frontend:
+    build: ./frontend
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    restart: always
+
+  # Backend Service (Node.js API)
+  backend:
+    build: ./backend
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+      - PORT=3000
+      - DB_HOST=db
+      - DB_USER=root
+      - DB_PASSWORD=rootpassword
+      - DB_NAME=auth_system
+      - DB_PORT=3306
+      - JWT_SECRET=dev_secret_key_12345
+      - JWT_EXPIRES_IN=1h
+      - JWT_REFRESH_SECRET=dev_refresh_key_67890
+      - JWT_REFRESH_EXPIRES_IN=7d
+      # Add other env vars from your .env here if needed
+    depends_on:
+      - db
+    restart: always
+
+  # Database Service (MySQL)
+  db:
+    image: mysql:8.0
+    command: --default-authentication-plugin=mysql_native_password
+    environment:
+      MYSQL_ROOT_PASSWORD: rootpassword
+      MYSQL_DATABASE: auth_system
+    ports:
+      - "3307:3306" # Expose to host on 3307 if you want to access via Workbench, internal is 3306
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+
+volumes:
+  db_data:

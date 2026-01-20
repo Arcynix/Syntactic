@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clean Code Best Practices - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Clean Code</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Clean Code: Writing Code for Humans</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Software Engineering</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 22 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>"Any fool can write code that a computer can understand. Good programmers write code that humans
+                        can understand." — Martin Fowler</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Clean code is code that is easy to read, easy to understand, and easy to maintain. It's not just
+                        about making code work; it's about making it sustainable for the long term.</p>
+
+                    <h2 id="meaningful-names">Meaningful Names</h2>
+                    <p>Names should reveal intent. Avoid using generic names like `data`, `info`, or `item`.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>// Bad
+const d = new Date(); // elapsed time in days
+
+// Good
+const elapsedTimeInDays = new Date();</code></pre>
+                    </div>
+
+                    <h2 id="functions">Functions</h2>
+                    <p>Functions should be small and do one thing (Single Responsibility Principle).</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">JavaScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code>// Bad
+function processUser(user) {
+  validateUser(user);
+  saveToDatabase(user);
+  sendWelcomeEmail(user);
+}
+
+// Good
+function registerUser(user) {
+  if (isValid(user)) {
+    saveUser(user);
+    notifyUser(user);
+  }
+}</code></pre>
+                    </div>
+
+                    <h2 id="comments">Comments</h2>
+                    <p>Don't comment bad code—rewrite it. Comments should be used to explain "why", not "what".</p>
+
+                    <h2 id="solid-principles">SOLID Principles</h2>
+                    <p>The SOLID principles are five design principles intended to make software designs more
+                        understandable, flexible, and maintainable.</p>
+                    <ul>
+                        <li><strong>S</strong>: Single Responsibility Principle</li>
+                        <li><strong>O</strong>: Open-Closed Principle</li>
+                        <li><strong>L</strong>: Liskov Substitution Principle</li>
+                        <li><strong>I</strong>: Interface Segregation Principle</li>
+                        <li><strong>D</strong>: Dependency Inversion Principle</li>
+                    </ul>
+
+                    <h2 id="dry-kiss">DRY and KISS</h2>
+                    <ul>
+                        <li><strong>DRY (Don't Repeat Yourself)</strong>: Every piece of knowledge must have a single,
+                            unambiguous, authoritative representation within a system.</li>
+                        <li><strong>KISS (Keep It Simple, Stupid)</strong>: Most systems work best if they are kept
+                            simple rather than made complicated.</li>
+                    </ul>
+
+                    <h2 id="formatting">Formatting</h2>
+                    <p>Consistent formatting is essential for readability. Use tools like Prettier or ESLint to automate
+                        this.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://www.oreilly.com/library/view/clean-code-a/9780136083238/"
+                                target="_blank">Clean Code by Robert C. Martin</a></li>
+                        <li><a href="https://github.com/ryanmcdermott/clean-code-javascript" target="_blank">Clean Code
+                                JavaScript (GitHub)</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="design-patterns.html" class="related-link">
+                        <strong>Design Patterns</strong>
+                        Architecture
+                    </a>
+                    <a href="unit-testing.html" class="related-link">
+                        <strong>Unit Testing</strong>
+                        Quality Assurance
+                    </a>
+                    <a href="refactoring.html" class="related-link">
+                        <strong>Refactoring</strong>
+                        Improvement
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+</body>
+
+</html>

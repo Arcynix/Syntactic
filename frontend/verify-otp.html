@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntactic - Verify OTP</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo">SYN</div>
+            <h1>Verify Account</h1>
+            <p style="color: #a0a0a0; margin-bottom: 20px; font-size: 0.9rem;">
+                Please enter the 6-digit code sent to your email.
+            </p>
+            <form class="form" id="otpForm">
+                <div class="input-group">
+                    <label for="otp">OTP Code</label>
+                    <input type="text" id="otp" name="otp" placeholder="123456" maxlength="6"
+                        style="text-align: center; letter-spacing: 5px; font-weight: 600;" required>
+                </div>
+                <!-- Hidden email field if needed, but we use URL param -->
+                <div id="error-message"
+                    style="color: #ff6b6b; margin-bottom: 0.5rem; display: none; font-size: 0.9rem;"></div>
+                <div id="success-message"
+                    style="color: #4a7c59; margin-bottom: 0.5rem; display: none; font-size: 0.9rem;"></div>
+                <button class="login-btn" type="submit">Verify & Login</button>
+            </form>
+            <div style="margin-top: 15px; color: #a0a0a0; font-size: 0.9rem;">
+                Didn't receive the code? <a href="#" id="resendBtn"
+                    style="color: #fff; text-decoration: none; border-bottom: 1px solid #4a7c59;">Resend Code</a>
+            </div>
+        </div>
+    </div>
+    <script src="verify-otp.js"></script>
+</body>
+
+</html>

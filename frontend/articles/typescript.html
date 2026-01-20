@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TypeScript Programming - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">TypeScript</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">TypeScript: JavaScript with Syntax for Types</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Language</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 25 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>TypeScript is a strongly typed programming language that builds on JavaScript, giving you better
+                        tooling at any scale.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>TypeScript adds additional syntax to JavaScript to support a tighter integration with your
+                        editor. Catch errors early in your editor.</p>
+
+                    <h2 id="basic-types">Basic Types</h2>
+                    <p>TypeScript provides several basic types to help you define your data.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">TypeScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-typescript">let isDone: boolean = false;
+let decimal: number = 6;
+let color: string = "blue";
+let list: number[] = [1, 2, 3];
+let x: [string, number] = ["hello", 10]; // Tuple</code></pre>
+                    </div>
+
+                    <h2 id="interfaces">Interfaces</h2>
+                    <p>One of TypeScript's core principles is that type checking focuses on the shape that values have.
+                    </p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">TypeScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-typescript">interface User {
+    name: string;
+    id: number;
+}
+
+const user: User = {
+    name: "Hayes",
+    id: 0,
+};</code></pre>
+                    </div>
+
+                    <h2 id="generics">Generics</h2>
+                    <p>Generics allow you to create reusable components that can work over a variety of types rather
+                        than a single one.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">TypeScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-typescript">function identity<Type>(arg: Type): Type {
+    return arg;
+}
+
+let output = identity<string>("myString");</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://www.typescriptlang.org/docs/" target="_blank">TypeScript Documentation</a>
+                        </li>
+                        <li><a href="https://www.typescriptlang.org/play" target="_blank">TypeScript Playground</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="javascript.html" class="related-link">
+                        <strong>JavaScript</strong>
+                        The Foundation
+                    </a>
+                    <a href="react.html" class="related-link">
+                        <strong>React</strong>
+                        With TypeScript
+                    </a>
+                    <a href="node-js.html" class="related-link">
+                        <strong>Node.js</strong>
+                        Backend TS
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-typescript.min.js"></script>
+</body>
+
+</html>

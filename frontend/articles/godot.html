@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godot Engine - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Godot</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Godot Engine: The Open Source Alternative</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Game Dev</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 15 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Godot is a free, all-in-one, cross-platform game engine that makes it easy for you to create 2D
+                        and 3D games.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>Godot provides a huge set of common tools, so you can just focus on making your game without
+                        reinventing the wheel. It's completely free and open-source under the MIT license.</p>
+
+                    <h2 id="gdscript">GDScript</h2>
+                    <p>GDScript is a high-level, dynamically typed programming language used to create content in Godot.
+                        It uses a syntax similar to Python.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">GDScript</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-gdscript">extends KinematicBody2D
+
+var speed = 200
+var velocity = Vector2()
+
+func _physics_process(delta):
+    velocity = Vector2()
+    if Input.is_action_pressed("ui_right"):
+        velocity.x += 1
+    if Input.is_action_pressed("ui_left"):
+        velocity.x -= 1
+    
+    velocity = velocity.normalized() * speed
+    move_and_slide(velocity)</code></pre>
+                    </div>
+
+                    <h2 id="nodes">Nodes & Scenes</h2>
+                    <p>Everything in Godot is a Node. Nodes are organized into Scenes, and Scenes can be instanced into
+                        other Scenes, creating a powerful hierarchical structure.</p>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://docs.godotengine.org/en/stable/" target="_blank">Godot Documentation</a>
+                        </li>
+                        <li><a href="https://godotengine.org/community" target="_blank">Godot Community</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="python.html" class="related-link">
+                        <strong>Python</strong>
+                        Similar Syntax
+                    </a>
+                    <a href="game-mechanics.html" class="related-link">
+                        <strong>Game Mechanics</strong>
+                        Design
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+</body>
+
+</html>

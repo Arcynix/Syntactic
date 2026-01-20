@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntactic - Community</title>
+    <link rel="stylesheet" href="styles/home.css">
+    <link rel="stylesheet" href="styles/profile_menu.css">
+    <link rel="stylesheet" href="styles/community.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script src="scripts/auth.js"></script>
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <!-- Main Navigation -->
+                <div class="menu-section main-links">
+                    <a href="home.html">Home</a>
+                    <a href="articles.html">Articles</a>
+                    <a href="topics.html">Topics</a>
+                    <a href="community.html" class="active">Community</a>
+                </div>
+
+                <!-- Explore Topics -->
+                <div class="menu-section">
+                    <h4 class="menu-section-title">Explore Topics</h4>
+                    <div class="menu-grid">
+                        <a href="topics/web-development.html">Web Dev</a>
+                        <a href="topics/backend.html">Backend</a>
+                        <a href="topics/frontend.html">Frontend</a>
+                        <a href="topics/ai-ml.html">AI & ML</a>
+                        <a href="topics/cloud.html">Cloud</a>
+                        <a href="topics/security.html">Security</a>
+                        <a href="topics/databases.html">Databases</a>
+                        <a href="topics/devops.html">DevOps</a>
+                    </div>
+                </div>
+
+                <!-- Popular Guides -->
+                <div class="menu-section">
+                    <h4 class="menu-section-title">Popular Guides</h4>
+                    <div class="menu-grid">
+                        <a href="articles/python.html">Python</a>
+                        <a href="articles/javascript.html">JavaScript</a>
+                        <a href="articles/react.html">React</a>
+                        <a href="articles/sql.html">SQL</a>
+                        <a href="articles/git.html">Git</a>
+                        <a href="articles/docker.html">Docker</a>
+                    </div>
+                </div>
+
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="home.html">Home</a>
+            <span>›</span>
+            <span class="current">Community</span>
+        </div>
+
+        <main class="page-content">
+            <h1 class="page-title">Join the Community.</h1>
+            <p class="page-subtitle">Contribute to the world's largest open coding knowledge base.</p>
+
+            <div class="help-grid">
+                <!-- Contact Form -->
+                <div class="contact-section">
+                    <h2>Contribute an article</h2>
+                    <form class="contact-form" action="coming-soon.html" method="GET">
+                        <input type="hidden" name="feature" value="Contribution Submission">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Email</label>
+                            <input type="email" placeholder="john@example.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Article Topic</label>
+                            <textarea placeholder="What would you like to write about?" rows="5"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Proposal</button>
+                    </form>
+                </div>
+
+                <!-- FAQ Section -->
+                <div class="faq-section">
+                    <h2>Ways to Contribute</h2>
+
+                    <div class="faq-item">
+                        <h3>Write Articles</h3>
+                        <p>Share your expertise by writing comprehensive guides and documentation on your favorite
+                            topics.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Review & Edit</h3>
+                        <p>Help maintain accuracy by reviewing and suggesting improvements to existing articles.</p>
+                    </div>
+
+                    <div class="faq-item">
+                        <h3>Add Code Examples</h3>
+                        <p>Contribute practical code snippets and examples to help others learn by doing.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="recent-contributions">
+                <h2>Recent Contributions</h2>
+                <div class="contribution-list">
+                    <div class="contribution-item">
+                        <div class="contrib-avatar">👨‍💻</div>
+                        <div class="contrib-details">
+                            <h4>Sarah Chen</h4>
+                            <p>Updated "Python Decorators" article with advanced examples</p>
+                            <span class="contrib-time">2 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="contribution-item">
+                        <div class="contrib-avatar">👩‍💻</div>
+                        <div class="contrib-details">
+                            <h4>Marcus Johnson</h4>
+                            <p>Created new article "GraphQL Best Practices"</p>
+                            <span class="contrib-time">5 hours ago</span>
+                        </div>
+                    </div>
+                    <div class="contribution-item">
+                        <div class="contrib-avatar">🧑‍💻</div>
+                        <div class="contrib-details">
+                            <h4>Aisha Patel</h4>
+                            <p>Added code examples to "React Performance Optimization"</p>
+                            <span class="contrib-time">1 day ago</span>
+                        </div>
+                    </div>
+                    <div class="contribution-item">
+                        <div class="contrib-avatar">👨‍💻</div>
+                        <div class="contrib-details">
+                            <h4>David Kim</h4>
+                            <p>Fixed typos in "Docker Networking" article</p>
+                            <span class="contrib-time">2 days ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="home.html">Home</a>
+                <a href="articles.html">Articles</a>
+                <a href="topics.html">Topics</a>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <a href="coming-soon.html?feature=Privacy%20Policy">Privacy Policy</a>
+                <a href="coming-soon.html?feature=Terms%20of%20Service">Terms of Service</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="scripts/main.js?v=2"></script>
+</body>
+
+</html>

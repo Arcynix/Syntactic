@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syntactic - Login</title>
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <div class="login-card">
+            <div class="logo">SYN</div>
+            <h1>Welcome Back</h1>
+            <form class="form" id="loginForm">
+                <div class="input-group">
+                    <label for="username">Username or Email</label>
+                    <input type="text" id="username" name="username" placeholder="Enter Username or Email" required>
+                </div>
+                <div style="text-align: right; margin-top: 5px;">
+                    <a href="forgot-password.html"
+                        style="color: #a0a0a0; font-size: 0.8rem; text-decoration: none;">Forgot Password?</a>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter Password" required>
+                </div>
+                <div id="error-message" style="color: red; margin-bottom: 1rem; display: none;"></div>
+                <button class="login-btn" type="submit">Login</button>
+            </form>
+            <div style="margin-top: 20px; color: #a0a0a0; font-size: 0.9rem;">
+                Don't have an account? <a href="register.html"
+                    style="color: #fff; text-decoration: none; border-bottom: 1px solid #4a7c59;">Sign Up</a>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unreal Engine 5 - Syntactic</title>
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/profile_menu.css">
+    <link rel="stylesheet" href="../styles/article.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="container page-container">
+        <nav class="navbar">
+            <div class="logo">SYN</div>
+            <div class="search-container">
+                <div class="search-box">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" placeholder="Search articles...">
+                </div>
+            </div>
+            <div class="nav-menu">
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Community</a>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+
+        <div class="breadcrumbs">
+            <a href="../home.html">Home</a>
+            <span>›</span>
+            <a href="../articles.html">Articles</a>
+            <span>›</span>
+            <span class="current">Unreal Engine</span>
+        </div>
+
+        <div class="article-container">
+            <aside class="toc-sidebar">
+                <h3>On This Page</h3>
+                <ul class="toc-list">
+                    <!-- Auto-generated -->
+                </ul>
+            </aside>
+
+            <main class="article-main">
+                <header class="article-header">
+                    <h1 class="article-title">Unreal Engine 5: Next-Gen Game Development</h1>
+                    <div class="article-meta">
+                        <span class="article-tag">Game Dev</span>
+                        <span>📅 Updated: December 2024</span>
+                        <span>⏱️ 25 min read</span>
+                    </div>
+                </header>
+
+                <div class="article-content">
+                    <p>Unreal Engine 5 is the world's most open and advanced real-time 3D creation tool for photoreal
+                        visuals and immersive experiences.</p>
+
+                    <h2 id="introduction">Introduction</h2>
+                    <p>UE5 introduces groundbreaking features like Nanite (virtualized geometry) and Lumen (dynamic
+                        global illumination), pushing the boundaries of realism in games.</p>
+
+                    <h2 id="blueprints">Blueprints Visual Scripting</h2>
+                    <p>Blueprints allow designers and developers to create complex game logic without writing a single
+                        line of code.</p>
+
+                    <h2 id="cpp">C++ in Unreal</h2>
+                    <p>For high-performance systems and deep engine access, C++ is the language of choice in Unreal
+                        Engine.</p>
+
+                    <div class="code-block">
+                        <div class="code-header">
+                            <span class="code-language">C++</span>
+                            <button class="copy-btn">Copy</button>
+                        </div>
+                        <pre><code class="language-cpp">#include "GameFramework/Actor.h"
+#include "MyActor.generated.h"
+
+UCLASS()
+class AMyActor : public AActor
+{
+    GENERATED_BODY()
+
+public:
+    virtual void Tick(float DeltaTime) override
+    {
+        Super::Tick(DeltaTime);
+        FVector NewLocation = GetActorLocation();
+        NewLocation.Z += 1.0f;
+        SetActorLocation(NewLocation);
+    }
+};</code></pre>
+                    </div>
+                </div>
+
+                <div class="references">
+                    <h2>References</h2>
+                    <ul>
+                        <li><a href="https://docs.unrealengine.com/5.0/en-US/" target="_blank">Unreal Engine 5
+                                Documentation</a></li>
+                        <li><a href="https://dev.epicgames.com/community/unreal-engine" target="_blank">Unreal Developer
+                                Community</a></li>
+                    </ul>
+                </div>
+            </main>
+
+            <aside class="related-sidebar">
+                <div class="related-box">
+                    <h3>Related Articles</h3>
+                    <a href="cpp.html" class="related-link">
+                        <strong>C++</strong>
+                        Core Language
+                    </a>
+                    <a href="shaders.html" class="related-link">
+                        <strong>Shaders</strong>
+                        Visual Effects
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>SYN</h3>
+                <p>Empowering developers worldwide with cutting-edge technical education.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <a href="../home.html">Home</a>
+                <a href="../articles.html">Articles</a>
+                <a href="../topics.html">Topics</a>
+                <a href="../community.html">Contribute</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Syntactic. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../scripts/main.js?v=2"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+</body>
+
+</html>
