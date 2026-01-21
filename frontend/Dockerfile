@@ -3,6 +3,8 @@ FROM nginx:alpine
 
 # Copy your website files from the current directory into the Nginx public html directory
 COPY . /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
 
 # Expose port 80 to indicate the container listens for HTTP traffic on this port
 EXPOSE 80

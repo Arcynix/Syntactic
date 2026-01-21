@@ -8,7 +8,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     // Populate Fields
     try {
-        const res = await fetch('http://localhost:3000/api/users/profile', {
+        // Replace for fetch calls to profile
+        const res = await fetch('/api/users/profile', {
             headers: { 'Authorization': `Bearer ${token}` }
         });
         const data = await res.json();
@@ -33,7 +34,8 @@ document.addEventListener('DOMContentLoaded', async () => {
             const msg = document.getElementById('profileMsg');
 
             try {
-                const res = await fetch('http://localhost:3000/api/users/profile', {
+                // Replace for fetch calls to profile
+                const res = await fetch('/api/users/profile', {
                     method: 'PATCH',
                     headers: {
                         'Content-Type': 'application/json',
